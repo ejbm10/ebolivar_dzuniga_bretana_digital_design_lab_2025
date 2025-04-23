@@ -1,0 +1,5 @@
+module COUNTER (
+	input clk,
+	input rst,
+	output logic [25:0] count
+)
