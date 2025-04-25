@@ -1,6 +1,6 @@
-module Comparator (
-	input logic [28:0] A,
-	input logic [28:0] B,
+module Comparator #(parameter N) (
+	input logic [N-1:0] A,
+	input logic [N-1:0] B,
 	output logic cmp
 );
 
