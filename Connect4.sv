@@ -3,8 +3,13 @@ module Connect4 (
 	input logic rst,
 	input logic [2:0] column,
 	input logic load_btn,
-	input logic select
+	input logic select,
+	output logic in_column0,
+	output logic is0x5empty,
+	output logic [1:0] val
 );
+	
+	logic [1:0] mux_out;
 	
 	logic en0x0, en0x1, en0x2, en0x3, en0x4, en0x5;
 	
@@ -23,7 +28,7 @@ module Connect4 (
 	
 	// Modulos para colocar fichas en la columna 0
 	
-	Comparator #(.N(6)) comp_col0 (
+	Comparator #(.N(3)) comp_col0 (
 		.A(column),
 		.B(3'd0),
 		.cmp(col0)
@@ -79,6 +84,10 @@ module Connect4 (
 		.D(mux_out),
 		.Q(q0x5)
 	);
+	
+	assign in_column0 = col0;
+	assign is0x5empty = empty0x5;
+	assign val = q0x5;
 	
 endmodule
 
