@@ -1,0 +1,13 @@
+module Counter (
+	input logic clk,
+	input logic rst,
+	input logic en_count,
+	output logic count
+);
+
+	always_ff @(posedge clk or negedge rst) begin
+		if (rst) count <= 0;
+		else if (en_count) count <= count + 1;
+	end
+	
+endmodule

@@ -8,7 +8,7 @@ module FSM (
 	input logic full,
 	output logic rst_timer,
 	output logic en_neg,
-	output logic en_load,
+	output logic en_count,
 	output logic en_check,
 	output logic en_comp_board,
 	output logic player1_win,
@@ -41,7 +41,7 @@ module FSM (
 	
 	assign rst_timer = (state == 4'b0100);
 	assign en_neg = (state == 4'b0100);
-	assign en_load = (state == 4'b0101);
+	assign en_count = (state == 4'b0101);
 	assign en_check = (state == 4'b0110);
 	assign en_comp_board = (state == 4'b0111);
 	assign player1_win = (state == 4'b1000);
