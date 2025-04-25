@@ -4,9 +4,8 @@ module Connect4 (
 	input logic [2:0] column,
 	input logic load_btn,
 	input logic select,
-	output logic in_column0,
-	output logic is0x5empty,
-	output logic [1:0] val
+	output logic [1:0] val4,
+	output logic [1:0] val5
 );
 	
 	logic [1:0] mux_out;
@@ -14,6 +13,8 @@ module Connect4 (
 	logic en0x0, en0x1, en0x2, en0x3, en0x4, en0x5;
 	
 	logic empty0x0, empty0x1, empty0x2, empty0x3, empty0x4, empty0x5;
+	
+	logic occupied0x5;
 	
 	logic [1:0] q0x0, q0x1, q0x2, q0x3, q0x4, q0x5;
 	
@@ -70,11 +71,33 @@ module Connect4 (
 		.cmp(empty0x5)
 	);
 	
+	Inverter inv0x4 (
+		.A(empty0x5),
+		.Y(occupied0x5)
+	);
+	
+	AndGate and0x4 (
+		.A(empty0x4),
+		.B(occupied0x5),
+		.C(col0),
+		.D(load_btn),
+		.Y(en0x4)
+	);
+	
 	AndGate and0x5 (
 		.A(empty0x5),
 		.B(1),	// Ultima fila, no necesita verificar nada debajo
 		.C(col0),
+		.D(load_btn),
 		.Y(en0x5)
+	);
+	
+	Register pos0x4 (
+		.clk(clk),
+		.rst(rst),
+		.en(en0x4),
+		.D(mux_out),
+		.Q(q0x4)
 	);
 	
 	Register pos0x5 (
@@ -85,9 +108,8 @@ module Connect4 (
 		.Q(q0x5)
 	);
 	
-	assign in_column0 = col0;
-	assign is0x5empty = empty0x5;
-	assign val = q0x5;
+	assign val4 = q0x4;
+	assign val5 = q0x5;
 	
 endmodule
 
