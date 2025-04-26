@@ -9,39 +9,47 @@ module Connect4 (
 	output logic [1:0] val2,
 	output logic [1:0] val3,
 	output logic [1:0] val4,
-	output logic [1:0] val5,
-	output logic time_out
+	output logic [1:0] val5
 );
-	
+	logic swp_player, q_player;
 	logic [1:0] mux_out;
-	logic en_loading;
+	logic en_loading, t_out, rst_timer, change;
 	logic [28:0] timer;
 	
 	FSM controller (
 		.clk(clk),
 		.rst(rst),
 		.load(load_btn),
-		.en_loading(en_loading)
+		.time_out(t_out),
+		.en_loading(en_loading),
+		.rst_timer(rst_timer),
+		.change_player(change)
 	);
 	
 	Mux2to1 selector (
 		.A(2'b01),	// Value for FPGA player
 		.B(2'b10),	// Value for Arduino player
-		.S(player),
+		.S(q_player),
 		.Y(mux_out)
+	);
+	
+	Inverter swap (
+		.A(q_player),
+		.en(change),
+		.Y(swp_player)
 	);
 	
 	Counter seconds (
 		.clk(clk),
-		.rst(rst),
+		.rst(rst | rst_timer),
 		.en_count(1),
 		.count(timer)
 	);
 	
 	Comparator #(.N(29)) check10secs (
 		.A(timer),
-		.B(29'd499_999_999),
-		.cmp(time_out)
+		.B(29'd10),
+		.cmp(t_out)
 	);
 	
 	Loader loader (
@@ -56,6 +64,14 @@ module Connect4 (
 		.val03(val3),
 		.val04(val4),
 		.val05(val5)
+	);
+	
+	PlayerRegister current (
+		.clk(clk),
+		.rst(rst),
+		.initial_player(player),
+		.D(swp_player),
+		.Q(q_player)
 	);
 	
 endmodule

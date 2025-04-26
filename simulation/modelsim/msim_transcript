@@ -12,146 +12,227 @@
 # 
 # vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025 {C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/FSM.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:32:10 on Apr 25,2025
+# Start time: 00:40:17 on Apr 26,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025" C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/FSM.sv 
 # -- Compiling module FSM
 # 
 # Top level modules:
 # 	FSM
-# End time: 23:32:10 on Apr 25,2025, Elapsed time: 0:00:00
+# End time: 00:40:17 on Apr 26,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025 {C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Mux2to1.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:32:10 on Apr 25,2025
+# Start time: 00:40:17 on Apr 26,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025" C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Mux2to1.sv 
 # -- Compiling module Mux2to1
 # 
 # Top level modules:
 # 	Mux2to1
-# End time: 23:32:11 on Apr 25,2025, Elapsed time: 0:00:01
+# End time: 00:40:17 on Apr 26,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025 {C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:32:11 on Apr 25,2025
+# Start time: 00:40:17 on Apr 26,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025" C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv 
 # -- Compiling module Inverter
 # 
 # Top level modules:
 # 	Inverter
-# End time: 23:32:11 on Apr 25,2025, Elapsed time: 0:00:00
+# End time: 00:40:18 on Apr 26,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025 {C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Counter.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:32:11 on Apr 25,2025
+# Start time: 00:40:18 on Apr 26,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025" C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Counter.sv 
 # -- Compiling module Counter
 # 
 # Top level modules:
 # 	Counter
-# End time: 23:32:11 on Apr 25,2025, Elapsed time: 0:00:00
+# End time: 00:40:18 on Apr 26,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025 {C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Comparator.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:32:11 on Apr 25,2025
+# Start time: 00:40:18 on Apr 26,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025" C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Comparator.sv 
 # -- Compiling module Comparator
 # 
 # Top level modules:
 # 	Comparator
-# End time: 23:32:11 on Apr 25,2025, Elapsed time: 0:00:00
+# End time: 00:40:18 on Apr 26,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025 {C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Register.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:32:11 on Apr 25,2025
+# Start time: 00:40:18 on Apr 26,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025" C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Register.sv 
 # -- Compiling module Register
 # 
 # Top level modules:
 # 	Register
-# End time: 23:32:11 on Apr 25,2025, Elapsed time: 0:00:00
+# End time: 00:40:18 on Apr 26,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025 {C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:32:11 on Apr 25,2025
+# Start time: 00:40:18 on Apr 26,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025" C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv 
 # -- Compiling module AndGate
 # 
 # Top level modules:
 # 	AndGate
-# End time: 23:32:11 on Apr 25,2025, Elapsed time: 0:00:00
+# End time: 00:40:18 on Apr 26,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025 {C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Connect4.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:32:11 on Apr 25,2025
+# Start time: 00:40:18 on Apr 26,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025" C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Connect4.sv 
 # -- Compiling module Connect4
 # 
 # Top level modules:
 # 	Connect4
-# End time: 23:32:11 on Apr 25,2025, Elapsed time: 0:00:00
+# End time: 00:40:18 on Apr 26,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025 {C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:32:11 on Apr 25,2025
+# Start time: 00:40:18 on Apr 26,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025" C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv 
 # -- Compiling module ColumnModule
 # 
 # Top level modules:
 # 	ColumnModule
-# End time: 23:32:11 on Apr 25,2025, Elapsed time: 0:00:00
+# End time: 00:40:18 on Apr 26,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025 {C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Loader.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:32:11 on Apr 25,2025
+# Start time: 00:40:18 on Apr 26,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025" C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Loader.sv 
 # -- Compiling module Loader
 # 
 # Top level modules:
 # 	Loader
-# End time: 23:32:11 on Apr 25,2025, Elapsed time: 0:00:00
+# End time: 00:40:18 on Apr 26,2025, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025 {C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/PlayerRegister.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:40:18 on Apr 26,2025
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025" C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/PlayerRegister.sv 
+# -- Compiling module PlayerRegister
+# 
+# Top level modules:
+# 	PlayerRegister
+# End time: 00:40:19 on Apr 26,2025, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 # 
 # vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025 {C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Connect4_tb.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:32:11 on Apr 25,2025
+# Start time: 00:40:19 on Apr 26,2025
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025" C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Connect4_tb.sv 
 # -- Compiling module Connect4_tb
 # 
 # Top level modules:
 # 	Connect4_tb
-# End time: 23:32:11 on Apr 25,2025, Elapsed time: 0:00:00
+# End time: 00:40:19 on Apr 26,2025, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs="+acc"  Connect4_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cyclonev_ver -L cyclonev_hssi_ver -L cyclonev_pcie_hip_ver -L rtl_work -L work -voptargs=""+acc"" Connect4_tb 
-# Start time: 23:32:12 on Apr 25,2025
+# Start time: 00:40:19 on Apr 26,2025
 # Loading sv_std.std
 # Loading work.Connect4_tb
 # Loading work.Connect4
 # Loading work.FSM
 # Loading work.Mux2to1
+# Loading work.Inverter
 # Loading work.Counter
 # Loading work.Comparator
 # Loading work.Loader
 # Loading work.ColumnModule
-# Loading work.Inverter
 # Loading work.AndGate
 # Loading work.Register
-# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Connect4.sv(34): [PCDPC] - Port size (1) does not match connection size (32) for port 'en_count'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Counter.sv(4).
+# Loading work.PlayerRegister
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Connect4.sv(42): [PCDPC] - Port size (1) does not match connection size (32) for port 'en_count'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Counter.sv(4).
 #    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/seconds File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Counter.sv
-# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(120): [PCDPC] - Port size (1) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv(3).
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(55): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column0/inv0 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(61): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column0/inv1 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(67): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column0/inv2 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(73): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column0/inv3 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(79): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column0/inv4 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(125): [PCDPC] - Port size (1) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv(3).
 #    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column0/and5 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv
-# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(120): [PCDPC] - Port size (1) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv(3).
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(55): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column1/inv0 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(61): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column1/inv1 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(67): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column1/inv2 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(73): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column1/inv3 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(79): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column1/inv4 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(125): [PCDPC] - Port size (1) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv(3).
 #    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column1/and5 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv
-# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(120): [PCDPC] - Port size (1) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv(3).
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(55): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column2/inv0 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(61): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column2/inv1 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(67): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column2/inv2 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(73): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column2/inv3 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(79): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column2/inv4 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(125): [PCDPC] - Port size (1) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv(3).
 #    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column2/and5 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv
-# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(120): [PCDPC] - Port size (1) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv(3).
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(55): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column3/inv0 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(61): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column3/inv1 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(67): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column3/inv2 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(73): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column3/inv3 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(79): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column3/inv4 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(125): [PCDPC] - Port size (1) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv(3).
 #    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column3/and5 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv
-# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(120): [PCDPC] - Port size (1) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv(3).
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(55): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column4/inv0 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(61): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column4/inv1 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(67): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column4/inv2 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(73): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column4/inv3 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(79): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column4/inv4 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(125): [PCDPC] - Port size (1) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv(3).
 #    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column4/and5 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv
-# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(120): [PCDPC] - Port size (1) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv(3).
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(55): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column5/inv0 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(61): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column5/inv1 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(67): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column5/inv2 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(73): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column5/inv3 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(79): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column5/inv4 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(125): [PCDPC] - Port size (1) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv(3).
 #    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column5/and5 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv
-# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(120): [PCDPC] - Port size (1) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv(3).
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(55): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column6/inv0 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(61): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column6/inv1 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(67): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column6/inv2 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(73): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column6/inv3 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(79): [PCDPC] - Port size (1) does not match connection size (32) for port 'en'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv(3).
+#    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column6/inv4 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
+# ** Warning: (vsim-3015) C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv(125): [PCDPC] - Port size (1) does not match connection size (32) for port 'B'. The port definition is at: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv(3).
 #    Time: 0 ps  Iteration: 0  Instance: /Connect4_tb/dut/loader/column6/and5 File: C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv
 # 
 # add wave *
@@ -161,6 +242,6 @@
 # .main_pane.objects.interior.cs.body.tree
 # run -all
 # Break key hit
-# Simulation stop requested.
-# End time: 23:33:12 on Apr 25,2025, Elapsed time: 0:01:00
-# Errors: 0, Warnings: 8
+# Break in Module PlayerRegister at C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/PlayerRegister.sv line 9
+# End time: 00:40:42 on Apr 26,2025, Elapsed time: 0:00:23
+# Errors: 0, Warnings: 43

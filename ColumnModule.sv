@@ -54,26 +54,31 @@ module ColumnModule (
 	
 	Inverter inv0 (
 		.A(empty1),
+		.en(1),
 		.Y(occupied1)
 	);
 	
 	Inverter inv1 (
 		.A(empty2),
+		.en(1),
 		.Y(occupied2)
 	);
 	
 	Inverter inv2 (
 		.A(empty3),
+		.en(1),
 		.Y(occupied3)
 	);
 	
 	Inverter inv3 (
 		.A(empty4),
+		.en(1),
 		.Y(occupied4)
 	);
 	
 	Inverter inv4 (
 		.A(empty5),
+		.en(1),
 		.Y(occupied5)
 	);
 	
