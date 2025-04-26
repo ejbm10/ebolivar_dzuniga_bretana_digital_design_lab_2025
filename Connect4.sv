@@ -13,8 +13,9 @@ module Connect4 (
 );
 	logic swp_player, q_player;
 	logic [1:0] mux_out;
-	logic en_loading, t_out, rst_timer, change;
+	logic en_loading, one_sec, t_out, rst_timer, change;
 	logic [28:0] timer;
+	logic [3:0] secs;
 	
 	FSM controller (
 		.clk(clk),
@@ -39,17 +40,30 @@ module Connect4 (
 		.Y(swp_player)
 	);
 	
-	Counter seconds (
+	Counter cycles (
 		.clk(clk),
 		.rst(rst | rst_timer),
 		.en_count(1),
 		.count(timer)
 	);
 	
-	Comparator #(.N(29)) check10secs (
-		.A(timer),
-		.B(29'd10),
+	Counter seconds (
+		.clk(clk),
+		.rst(rst | rst_timer),
+		.en_count(one_sec),
+		.count(secs)
+	);
+	
+	Comparator #(.N(4)) check10secs (
+		.A(secs),
+		.B(4'd10),
 		.cmp(t_out)
+	);
+	
+	Comparator #(.N(26)) check1sec (
+		.A(timer),
+		.B(26'd49_999_999),
+		.cmp(one_sec)
 	);
 	
 	Loader loader (

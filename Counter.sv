@@ -2,7 +2,7 @@ module Counter (
 	input logic clk,
 	input logic rst,
 	input logic en_count,
-	output logic [28:0] count
+	output logic [25:0] count
 );
 
 	always_ff @(negedge clk or posedge rst) begin
