@@ -2,7 +2,7 @@ module Connect4_tb();
 
 	logic clk, rst, load_btn, select;
 	logic [2:0] column;
-	logic [1:0] val4, val5;
+	logic [1:0] val0, val1, val2, val3, val4, val5;
 
 	Connect4 dut (
 		.clk(clk),
@@ -10,6 +10,10 @@ module Connect4_tb();
 		.column(column),
 		.load_btn(load_btn),
 		.select(select),
+		.val0(val0),
+		.val1(val1),
+		.val2(val2),
+		.val3(val3),
 		.val4(val4),
 		.val5(val5)
 	);
@@ -27,6 +31,26 @@ module Connect4_tb();
 		#10;
 		
 		rst = 0;
+		
+		#100;
+		
+		load_btn = 1;
+		#10 load_btn = 0;
+		
+		#100;
+		
+		load_btn = 1;
+		#10 load_btn = 0;
+		
+		#100;
+		
+		load_btn = 1;
+		#10 load_btn = 0;
+		
+		#100;
+		
+		load_btn = 1;
+		#10 load_btn = 0;
 		
 		#100;
 		

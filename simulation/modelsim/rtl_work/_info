@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/simulation/modelsim
 vAndGate
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1745604447
+Z2 !s110 1745631025
 !i10b 1
 !s100 ND`mQRingLMUkZN_ACg?L0
 I:coWz>0U6miNoQn8Z;IZ13
@@ -18,21 +18,21 @@ Z3 VDg1SIo80bB@j0V0VzS_@n1
 !s105 AndGate_sv_unit
 S1
 R0
-w1745603897
+Z4 w1745629694
 8C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv
 FC:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv
 L0 1
-Z4 OV;L;10.5b;63
+Z5 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1745604447.000000
+Z6 !s108 1745631025.000000
 !s107 C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv|
 !i113 1
-Z6 o-sv -work work
-Z7 !s92 -sv -work work +incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025
-Z8 tCvgOpt 0
+Z7 o-sv -work work
+Z8 !s92 -sv -work work +incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025
+Z9 tCvgOpt 0
 n@and@gate
 vComparator
 R1
@@ -44,77 +44,77 @@ R3
 !s105 Comparator_sv_unit
 S1
 R0
-w1745596719
+R4
 8C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Comparator.sv
 FC:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Comparator.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
+Z10 !s108 1745631024.000000
 !s107 C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Comparator.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Comparator.sv|
 !i113 1
-R6
 R7
 R8
+R9
 n@comparator
 vConnect4
 R1
 R2
 !i10b 1
-!s100 eo2KP@VaVdb5EA5[HVH:o0
-Ijnd6b2[g7Oe6TAJL9h8RB0
+!s100 2GT4mzB7QWZJ:WLXf49RX1
+IVJJH:ZHh6XQ:DMWH][fm`2
 R3
 !s105 Connect4_sv_unit
 S1
 R0
-w1745604320
+w1745630859
 8C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Connect4.sv
 FC:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Connect4.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Connect4.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Connect4.sv|
 !i113 1
-R6
 R7
 R8
+R9
 n@connect4
 vConnect4_tb
 R1
 R2
 !i10b 1
-!s100 X4TM333GSQ;giGR;hi7W`2
-IgjI<MI1OBf88:7XTzbZ373
+!s100 2A^bWi5dColnFABQREk>h3
+IL9lVO9^g1h[PgX4SJFh8S2
 R3
 !s105 Connect4_tb_sv_unit
 S1
 R0
-w1745604425
+w1745631005
 8C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Connect4_tb.sv
 FC:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Connect4_tb.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Connect4_tb.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Connect4_tb.sv|
 !i113 1
-R6
 R7
 R8
+R9
 n@connect4_tb
 vInverter
 R1
-R2
+Z11 !s110 1745631024
 !i10b 1
 !s100 2LMm7DEU=dCY2L>TC;WOY2
 I@_7gZF_G5^LYST4L;36<E2
@@ -126,21 +126,21 @@ w1745598912
 8C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
 FC:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Inverter.sv|
 !i113 1
-R6
 R7
 R8
+R9
 n@inverter
 vMux2to1
 R1
-R2
+R11
 !i10b 1
 !s100 W=STP5oh=3jg;Lz?XRz^A2
 IN=RaSRoF[DF]2]hCkcJ7h1
@@ -148,21 +148,21 @@ R3
 !s105 Mux2to1_sv_unit
 S1
 R0
-w1745595345
+R4
 8C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Mux2to1.sv
 FC:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Mux2to1.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
+R10
 !s107 C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Mux2to1.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Mux2to1.sv|
 !i113 1
-R6
 R7
 R8
+R9
 n@mux2to1
 vRegister
 R1
@@ -174,19 +174,19 @@ R3
 !s105 Register_sv_unit
 S1
 R0
-w1745596443
+R4
 8C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Register.sv
 FC:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Register.sv
 L0 1
-R4
+R5
 r1
 !s85 0
 31
-R5
+R6
 !s107 C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Register.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025|C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Register.sv|
 !i113 1
-R6
 R7
 R8
+R9
 n@register
