@@ -8,77 +8,77 @@ module SecondsValidator (
 	
 	logic one_sec1, one_sec2, one_sec3, one_sec4, one_sec5, one_sec6, one_sec7, one_sec8, one_sec9;
 	
-	Counter cycles (
+	Counter #(.N(29)) cycles (
 		.clk(clk),
-		.rst(rst | rst_timer),
+		.rst(rst),
 		.en_count(1),
 		.count(timer)
 	);
 	
-	Counter seconds (
+	Counter #(.N(4)) seconds (
 		.clk(clk),
-		.rst(rst | rst_timer),
+		.rst(rst),
 		.en_count(one_sec1 | one_sec2 | one_sec3 | one_sec4 | one_sec5 | one_sec6 | one_sec7 | one_sec8 | one_sec9),
 		.count(secs)
 	);
 	
-	Comparator #(.N(26)) check_1_sec (
+	Comparator #(.N(29)) check_1_sec (
 		.A(timer),
-		.B(26'd5),
+		.B(29'd49_999_999),
 		.cmp(one_sec1)
 	);
 	
-	Comparator #(.N(26)) check_2_secs (
+	Comparator #(.N(29)) check_2_secs (
 		.A(timer),
-		.B(26'd10),
+		.B(29'd99_999_999),
 		.cmp(one_sec2)
 	);
 	
-	Comparator #(.N(26)) check_3_secs (
+	Comparator #(.N(29)) check_3_secs (
 		.A(timer),
-		.B(26'd15),
+		.B(29'd149_999_999),
 		.cmp(one_sec3)
 	);
 	
-	Comparator #(.N(26)) check_4_secs (
+	Comparator #(.N(29)) check_4_secs (
 		.A(timer),
-		.B(26'd20),
+		.B(29'd199_999_999),
 		.cmp(one_sec4)
 	);
 	
-	Comparator #(.N(26)) check_5_secs (
+	Comparator #(.N(29)) check_5_secs (
 		.A(timer),
-		.B(26'd25),
+		.B(29'd249_999_999),
 		.cmp(one_sec5)
 	);
 	
-	Comparator #(.N(26)) check_6_secs (
+	Comparator #(.N(29)) check_6_secs (
 		.A(timer),
-		.B(26'd30),
+		.B(29'd299_999_999),
 		.cmp(one_sec6)
 	);
 	
-	Comparator #(.N(26)) check_7_secs (
+	Comparator #(.N(29)) check_7_secs (
 		.A(timer),
-		.B(26'd35),
+		.B(29'd349_999_999),
 		.cmp(one_sec7)
 	);
 	
-	Comparator #(.N(26)) check_8_secs (
+	Comparator #(.N(29)) check_8_secs (
 		.A(timer),
-		.B(26'd40),
+		.B(29'd399_999_999),
 		.cmp(one_sec8)
 	);
 	
-	Comparator #(.N(26)) check_9_secs (
+	Comparator #(.N(29)) check_9_secs (
 		.A(timer),
-		.B(26'd45),
+		.B(29'd449_999_999),
 		.cmp(one_sec9)
 	);
 	
 	Comparator #(.N(29)) check_10_secs (
 		.A(timer),
-		.B(29'd50),
+		.B(29'd499_999_999),
 		.cmp(t_out)
 	);
 	

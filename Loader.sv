@@ -3,12 +3,12 @@ module Loader (
 	input logic rst,
 	input logic [2:0] column,
 	input logic load,
-	input logic [1:0] mux_out,
-	output logic [1:0] val00, val01, val02, val03, val04, val05
+	input logic [1:0] mux_out
 );
 
 	logic col0, col1, col2, col3, col4, col5, col6;
 	
+	logic [1:0] val00, val01, val02, val03, val04, val05;
 	logic [1:0] val10, val11, val12, val13, val14, val15;
 	logic [1:0] val20, val21, val22, val23, val24, val25;
 	logic [1:0] val30, val31, val32, val33, val34, val35;

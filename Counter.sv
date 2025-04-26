@@ -1,8 +1,8 @@
-module Counter (
+module Counter #(parameter N)(
 	input logic clk,
 	input logic rst,
 	input logic en_count,
-	output logic [25:0] count
+	output logic [N-1:0] count
 );
 
 	always_ff @(negedge clk or posedge rst) begin

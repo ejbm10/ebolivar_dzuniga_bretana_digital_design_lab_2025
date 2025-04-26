@@ -4,18 +4,15 @@ module Connect4 (
 	input logic [2:0] column,
 	input logic load_btn,
 	input logic player,
-	output logic [1:0] val0,
-	output logic [1:0] val1,
-	output logic [1:0] val2,
-	output logic [1:0] val3,
-	output logic [1:0] val4,
-	output logic [1:0] val5,
-	output logic [3:0] secs
+	output logic [6:0] segs1,
+	output logic [6:0] segs0
 );
 	logic swp_player, q_player;
 	logic [1:0] mux_out;
 	logic en_loading, t_out, rst_timer, change, one_sec1, one_sec2;
 	logic [28:0] timer;
+	
+	logic [3:0] secs;
 	
 	FSM controller (
 		.clk(clk),
@@ -53,13 +50,7 @@ module Connect4 (
 		.rst(rst),
 		.column(column),
 		.load(en_loading),
-		.mux_out(mux_out),
-		.val00(val0),
-		.val01(val1),
-		.val02(val2),
-		.val03(val3),
-		.val04(val4),
-		.val05(val5)
+		.mux_out(mux_out)
 	);
 	
 	PlayerRegister current (
@@ -68,6 +59,12 @@ module Connect4 (
 		.initial_player(player),
 		.D(swp_player),
 		.Q(q_player)
+	);
+	
+	SevenSegmentDecoder sg (
+		.A(secs),
+		.seg1(segs1),
+		.seg0(segs0)
 	);
 	
 endmodule
