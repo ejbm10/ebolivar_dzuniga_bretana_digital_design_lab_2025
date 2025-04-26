@@ -1,7 +1,7 @@
 module ColumnModule (
 	input logic clk,
 	input logic rst,
-	input logic load_btn,
+	input logic load,
 	input logic [1:0] mux_out,
 	input logic en,
 	output logic [1:0] q0,
@@ -81,7 +81,7 @@ module ColumnModule (
 		.A(empty0),
 		.B(occupied1),
 		.C(en),
-		.D(load_btn),
+		.D(load),
 		.Y(en0)
 	);
 	
@@ -89,7 +89,7 @@ module ColumnModule (
 		.A(empty1),
 		.B(occupied2),
 		.C(en),
-		.D(load_btn),
+		.D(load),
 		.Y(en1)
 	);
 	
@@ -97,7 +97,7 @@ module ColumnModule (
 		.A(empty2),
 		.B(occupied3),
 		.C(en),
-		.D(load_btn),
+		.D(load),
 		.Y(en2)
 	);
 	
@@ -105,7 +105,7 @@ module ColumnModule (
 		.A(empty3),
 		.B(occupied4),
 		.C(en),
-		.D(load_btn),
+		.D(load),
 		.Y(en3)
 	);
 	
@@ -113,7 +113,7 @@ module ColumnModule (
 		.A(empty4),
 		.B(occupied5),
 		.C(en),
-		.D(load_btn),
+		.D(load),
 		.Y(en4)
 	);
 	
@@ -121,7 +121,7 @@ module ColumnModule (
 		.A(empty5),
 		.B(1),	// BOTTOM ROW, NO NEED TO CHECK FOR TOKEN BELOW.
 		.C(en),
-		.D(load_btn),
+		.D(load),
 		.Y(en5)
 	);
 	

@@ -2,13 +2,13 @@ module Loader (
 	input logic clk,
 	input logic rst,
 	input logic [2:0] column,
-	input logic load_btn,
-	input logic [1:0] mux_out
+	input logic load,
+	input logic [1:0] mux_out,
+	output logic [1:0] val00, val01, val02, val03, val04, val05
 );
 
 	logic col0, col1, col2, col3, col4, col5, col6;
 	
-	logic [1:0] val00, val01, val02, val03, val04, val05;
 	logic [1:0] val10, val11, val12, val13, val14, val15;
 	logic [1:0] val20, val21, val22, val23, val24, val25;
 	logic [1:0] val30, val31, val32, val33, val34, val35;
@@ -54,14 +54,14 @@ module Loader (
 	
 	Comparator #(.N(3)) comp_col6 (
 		.A(column),
-		.B(3'd5),
+		.B(3'd6),
 		.cmp(col6)
 	);
 	
 	ColumnModule column0 (
 		.clk(clk),
 		.rst(rst),
-		.load_btn(load_btn),
+		.load(load),
 		.mux_out(mux_out),
 		.en(col0),
 		.q0(val00),
@@ -75,7 +75,7 @@ module Loader (
 	ColumnModule column1 (
 		.clk(clk),
 		.rst(rst),
-		.load_btn(load_btn),
+		.load(load),
 		.mux_out(mux_out),
 		.en(col1),
 		.q0(val10),
@@ -89,7 +89,7 @@ module Loader (
 	ColumnModule column2 (
 		.clk(clk),
 		.rst(rst),
-		.load_btn(load_btn),
+		.load(load),
 		.mux_out(mux_out),
 		.en(col2),
 		.q0(val20),
@@ -103,7 +103,7 @@ module Loader (
 	ColumnModule column3 (
 		.clk(clk),
 		.rst(rst),
-		.load_btn(load_btn),
+		.load(load),
 		.mux_out(mux_out),
 		.en(col3),
 		.q0(val30),
@@ -117,7 +117,7 @@ module Loader (
 	ColumnModule column4 (
 		.clk(clk),
 		.rst(rst),
-		.load_btn(load_btn),
+		.load(load),
 		.mux_out(mux_out),
 		.en(col4),
 		.q0(val40),
@@ -131,7 +131,7 @@ module Loader (
 	ColumnModule column5 (
 		.clk(clk),
 		.rst(rst),
-		.load_btn(load_btn),
+		.load(load),
 		.mux_out(mux_out),
 		.en(col5),
 		.q0(val50),
@@ -145,7 +145,7 @@ module Loader (
 	ColumnModule column6 (
 		.clk(clk),
 		.rst(rst),
-		.load_btn(load_btn),
+		.load(load),
 		.mux_out(mux_out),
 		.en(col6),
 		.q0(val60),

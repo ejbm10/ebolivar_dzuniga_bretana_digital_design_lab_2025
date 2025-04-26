@@ -4,7 +4,7 @@ module Mux2to1 (
 	input logic S,
 	output logic [1:0] Y
 );
-
-	assign Y = S ? A : B;
+	
+	assign Y = S ? B : A;
 	
 endmodule
