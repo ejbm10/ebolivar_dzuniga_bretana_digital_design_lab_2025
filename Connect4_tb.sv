@@ -39,6 +39,18 @@ module Connect4_tb();
 		
 		#100;
 		
+		column = 3'd1;
+		
+		load_btn = 1;
+		#10 load_btn = 0;
+		
+		#100;
+		
+		load_btn = 1;
+		#10 load_btn = 0;
+		
+		#100;
+		
 		load_btn = 1;
 		#10 load_btn = 0;
 		

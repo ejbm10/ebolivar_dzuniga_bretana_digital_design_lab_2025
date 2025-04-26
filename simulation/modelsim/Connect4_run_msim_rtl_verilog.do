@@ -11,6 +11,7 @@ vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bre
 vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025 {C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Register.sv}
 vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025 {C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/AndGate.sv}
 vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025 {C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Connect4.sv}
+vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025 {C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/ColumnModule.sv}
 
 vlog -sv -work work +incdir+C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025 {C:/Users/eboli/Documents/Github/ebolivar_dzuniga_bretana_digital_design_lab_2025/Connect4_tb.sv}
 
