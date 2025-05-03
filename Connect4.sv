@@ -14,7 +14,7 @@ module Connect4 (
 	
 	logic swp_player, q_player;
 	logic [1:0] mux_out;
-	logic en_loading, t_out, rst_timer, change, one_sec1, one_sec2, player1_winner, player2_winner, ard_btn;
+	logic board_full, en_loading, t_out, rst_timer, change, one_sec1, one_sec2, player1_winner, player2_winner, ard_btn;
 	logic [28:0] timer;
 	
 	logic [1:0] val00, val01, val02, val03, val04, val05;
@@ -25,9 +25,11 @@ module Connect4 (
 	logic [1:0] val50, val51, val52, val53, val54, val55;
 	logic [1:0] val60, val61, val62, val63, val64, val65;
 	
-	logic win;
+	logic win, game_over;
 	logic [1:0] winner;
 	logic [3:0] secs;
+	
+	logic [5:0] spots;
 	
 	FSM controller (
 		.clk(clk),
@@ -36,11 +38,13 @@ module Connect4 (
 		.time_out(t_out),
 		.win(win),
 		.current_player(q_player),
+		.full(board_full),
 		.en_loading(en_loading),
 		.rst_timer(rst_timer),
 		.change_player(change),
 		.player1_winner(player1_winner),
-		.player2_winner(player2_winner)
+		.player2_winner(player2_winner),
+		.game_over(game_over)
 	);
 	
 	Mux2to1 #(.N(2)) selector (
@@ -62,6 +66,19 @@ module Connect4 (
 		.timer(timer),
 		.t_out(t_out),
 		.secs(secs)
+	);
+	
+	Comparator #(.N(6)) is_board_full (
+		.A(spots),
+		.B(6'd42),
+		.cmp(board_full)
+	);
+	
+	Counter #(.N(6)) filled_spots (
+		.clk(clk),
+		.rst(rst),
+		.en_count(en_loading),
+		.count(spots)
 	);
 	
 	Loader loader (
