@@ -1,112 +1,157 @@
 module VictoryValidator (
-	input logic [1:0] q0,
-	input logic [1:0] q1,
-	input logic [1:0] q2,
-	input logic [1:0] q3,
-	input logic [1:0] q4,
-	input logic [1:0] q5,
+	input logic [1:0] val00, val01, val02, val03, val04, val05,
+	input logic [1:0] val10, val11, val12, val13, val14, val15,
+	input logic [1:0] val20, val21, val22, val23, val24, val25,
+	input logic [1:0] val30, val31, val32, val33, val34, val35,
+	input logic [1:0] val40, val41, val42, val43, val44, val45,
+	input logic [1:0] val50, val51, val52, val53, val54, val55,
+	input logic [1:0] val60, val61, val62, val63, val64, val65,
 	output logic win
 );
-	logic is_empty1, is_empty2, is_empty3;
-	logic not_empty1, not_empty2, not_empty3;
-	logic cmp1_out, cmp2_out, cmp3_out, cmp4_out, cmp5_out;
-	logic win1_out, win2_out, win3_out;
+	logic ver_win0, ver_win1, ver_win2, ver_win3, ver_win4, ver_win5, ver_win6;
+	logic hor_win0, hor_win1, hor_win2, hor_win3, hor_win4, hor_win5;
+	logic final_hor_win, final_ver_win;
 	
-	Comparator #(.N(2)) cmp1 (
-		.A(q0),
-		.B(q1),
-		.cmp(cmp1_out)
-	);
-	
-	Comparator #(.N(2)) cmp2 (
-		.A(q1),
-		.B(q2),
-		.cmp(cmp2_out)
+	HorizontalWin row0 (
+		.q0(val00),
+		.q1(val10),
+		.q2(val20),
+		.q3(val30),
+		.q4(val40),
+		.q5(val50),
+		.q6(val60),
+		.win(hor_win0)
 	);
 	
-	Comparator #(.N(2)) cmp3 (
-		.A(q2),
-		.B(q3),
-		.cmp(cmp3_out)
+	HorizontalWin row1 (
+		.q0(val01),
+		.q1(val11),
+		.q2(val21),
+		.q3(val31),
+		.q4(val41),
+		.q5(val51),
+		.q6(val61),
+		.win(hor_win1)
 	);
 	
-	Comparator #(.N(2)) cmp4 (
-		.A(q3),
-		.B(q4),
-		.cmp(cmp4_out)
+	HorizontalWin row2 (
+		.q0(val02),
+		.q1(val12),
+		.q2(val22),
+		.q3(val32),
+		.q4(val42),
+		.q5(val52),
+		.q6(val62),
+		.win(hor_win2)
 	);
 	
-	Comparator #(.N(2)) cmp5 (
-		.A(q4),
-		.B(q5),
-		.cmp(cmp5_out)
+	HorizontalWin row3 (
+		.q0(val03),
+		.q1(val13),
+		.q2(val23),
+		.q3(val33),
+		.q4(val43),
+		.q5(val53),
+		.q6(val63),
+		.win(hor_win3)
 	);
 	
-	Comparator #(.N(2)) not_empty_cmp1 (
-    .A(q1),
-    .B(2'b00),
-    .cmp(is_empty1)
-	);
-
-	Inverter inv1 (
-		 .A(is_empty1),
-		 .en(1),
-		 .Y(not_empty1)
-	);
-
-	AndGate possible_win_1 (
-		.A(cmp1_out),
-		.B(cmp2_out),
-		.C(cmp3_out),
-		.D(not_empty1),
-		.Y(win1_out)
+	HorizontalWin row4 (
+		.q0(val04),
+		.q1(val14),
+		.q2(val24),
+		.q3(val34),
+		.q4(val44),
+		.q5(val54),
+		.q6(val64),
+		.win(hor_win4)
 	);
 	
-	Comparator #(.N(2)) not_empty_cmp2 (
-    .A(q2),
-    .B(2'b00),
-    .cmp(is_empty2)
-	);
-
-	Inverter inv2 (
-		 .A(is_empty2),
-		 .en(1),
-		 .Y(not_empty2)
-	);
-	
-	AndGate possible_win_2 (
-		.A(cmp2_out),
-		.B(cmp3_out),
-		.C(cmp4_out),
-		.D(not_empty2),
-		.Y(win2_out)
+	HorizontalWin row5 (
+		.q0(val05),
+		.q1(val15),
+		.q2(val25),
+		.q3(val35),
+		.q4(val45),
+		.q5(val55),
+		.q6(val65),
+		.win(hor_win5)
 	);
 	
-	Comparator #(.N(2)) not_empty_cmp3 (
-    .A(q3),
-    .B(2'b00),
-    .cmp(is_empty3)
-	);
-
-	Inverter inv3 (
-		 .A(is_empty3),
-		 .en(1),
-		 .Y(not_empty3)
+	VerticalWin column0 (
+		.q0(val00),
+		.q1(val01),
+		.q2(val02),
+		.q3(val03),
+		.q4(val04),
+		.q5(val05),
+		.win(ver_win0)
 	);
 	
-	AndGate possible_win_3 (
-		.A(cmp3_out),
-		.B(cmp4_out),
-		.C(cmp5_out),
-		.D(not_empty3),
-		.Y(win3_out)
+	VerticalWin column1 (
+		.q0(val10),
+		.q1(val11),
+		.q2(val12),
+		.q3(val13),
+		.q4(val14),
+		.q5(val15),
+		.win(ver_win1)
 	);
 	
-	OrGate or1 (
-		.A(win1_out),
-		.B(win2_out),
-		.C(win3_out),
-		.Y(win)
+	VerticalWin column2 (
+		.q0(val20),
+		.q1(val21),
+		.q2(val22),
+		.q3(val23),
+		.q4(val24),
+		.q5(val25),
+		.win(ver_win2)
 	);
+	
+	VerticalWin column3 (
+		.q0(val30),
+		.q1(val31),
+		.q2(val32),
+		.q3(val33),
+		.q4(val34),
+		.q5(val35),
+		.win(ver_win3)
+	);
+	
+	VerticalWin column4 (
+		.q0(val40),
+		.q1(val41),
+		.q2(val42),
+		.q3(val43),
+		.q4(val44),
+		.q5(val45),
+		.win(ver_win4)
+	);
+	
+	VerticalWin column5 (
+		.q0(val50),
+		.q1(val51),
+		.q2(val52),
+		.q3(val53),
+		.q4(val54),
+		.q5(val55),
+		.win(ver_win5)
+	);
+	
+	VerticalWin column6 (
+		.q0(val60),
+		.q1(val61),
+		.q2(val62),
+		.q3(val63),
+		.q4(val64),
+		.q5(val65),
+		.win(ver_win6)
+	);
+	
+	assign final_hor_win = hor_win0 | hor_win1 | hor_win2 | hor_win3 | hor_win4 | hor_win5;
+	assign final_ver_win = ver_win0 | ver_win1 | ver_win2 | ver_win3 | ver_win4 | ver_win5 | ver_win6;
+	
+	assign win = final_hor_win | final_ver_win;
 	
 endmodule
+

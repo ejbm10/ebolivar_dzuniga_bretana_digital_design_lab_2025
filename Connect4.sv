@@ -10,6 +10,7 @@ module Connect4 (
 	output logic [1:0] val3,
 	output logic [1:0] val4,
 	output logic [1:0] val5,
+	output logic [1:0] val6,
 	output logic win
 	//output logic [6:0] segs1,
 	//output logic [6:0] segs0
@@ -20,6 +21,12 @@ module Connect4 (
 	logic [28:0] timer;
 	
 	logic [1:0] val00, val01, val02, val03, val04, val05;
+	logic [1:0] val10, val11, val12, val13, val14, val15;
+	logic [1:0] val20, val21, val22, val23, val24, val25;
+	logic [1:0] val30, val31, val32, val33, val34, val35;
+	logic [1:0] val40, val41, val42, val43, val44, val45;
+	logic [1:0] val50, val51, val52, val53, val54, val55;
+	logic [1:0] val60, val61, val62, val63, val64, val65;
 	
 	logic [3:0] secs;
 	
@@ -65,16 +72,88 @@ module Connect4 (
 		.val02(val02), 
 		.val03(val03),
 		.val04(val04),
-		.val05(val05)
+		.val05(val05),
+		.val10(val10), 
+		.val11(val11), 
+		.val12(val12), 
+		.val13(val13), 
+		.val14(val14), 
+		.val15(val15),
+		.val20(val20), 
+		.val21(val21), 
+		.val22(val22), 
+		.val23(val23), 
+		.val24(val24), 
+		.val25(val25),
+		.val30(val30), 
+		.val31(val31), 
+		.val32(val32), 
+		.val33(val33), 
+		.val34(val34), 
+		.val35(val35),
+		.val40(val40), 
+		.val41(val41), 
+		.val42(val42), 
+		.val43(val43), 
+		.val44(val44), 
+		.val45(val45),
+		.val50(val50),
+		.val51(val51), 
+		.val52(val52), 
+		.val53(val53), 
+		.val54(val54), 
+		.val55(val55),
+		.val60(val60), 
+		.val61(val61), 
+		.val62(val62), 
+		.val63(val63), 
+		.val64(val64), 
+		.val65(val65)
 	);
 	
 	VictoryValidator victory (
-		.q0(val00),
-		.q1(val01),
-		.q2(val02),
-		.q3(val03),
-		.q4(val04),
-		.q5(val05),
+		.val00(val00),
+		.val01(val01),
+		.val02(val02), 
+		.val03(val03),
+		.val04(val04),
+		.val05(val05),
+		.val10(val10), 
+		.val11(val11), 
+		.val12(val12), 
+		.val13(val13), 
+		.val14(val14), 
+		.val15(val15),
+		.val20(val20), 
+		.val21(val21), 
+		.val22(val22), 
+		.val23(val23), 
+		.val24(val24), 
+		.val25(val25),
+		.val30(val30), 
+		.val31(val31), 
+		.val32(val32), 
+		.val33(val33), 
+		.val34(val34), 
+		.val35(val35),
+		.val40(val40), 
+		.val41(val41), 
+		.val42(val42), 
+		.val43(val43), 
+		.val44(val44), 
+		.val45(val45),
+		.val50(val50),
+		.val51(val51), 
+		.val52(val52), 
+		.val53(val53), 
+		.val54(val54), 
+		.val55(val55),
+		.val60(val60), 
+		.val61(val61), 
+		.val62(val62), 
+		.val63(val63), 
+		.val64(val64), 
+		.val65(val65),
 		.win(win)
 	);
 	
@@ -92,12 +171,13 @@ module Connect4 (
 		//.seg0(segs0)
 	//);
 	
-	assign val0 = val00;
-	assign val1 = val01;
-	assign val2 = val02;
-	assign val3 = val03;
-	assign val4 = val04;
-	assign val5 = val05;
+	assign val0 = val05;
+	assign val1 = val15;
+	assign val2 = val25;
+	assign val3 = val35;
+	assign val4 = val45;
+	assign val5 = val55;
+	assign val6 = val65;
 	
 endmodule
 
