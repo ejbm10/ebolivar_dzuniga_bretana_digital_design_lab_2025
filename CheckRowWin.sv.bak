@@ -1,0 +1,10 @@
+module CheckRowWin (
+	input logic [1:0] val0,
+	input logic [1:0] val1,
+	input logic [1:0] val2,
+	input logic [1:0] val3,
+	input logic [1:0] val4,
+	input logic [1:0] val5,
+	input logic [1:0] val6,
+	output logic win
+);
