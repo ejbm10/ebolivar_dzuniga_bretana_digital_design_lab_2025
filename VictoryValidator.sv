@@ -11,6 +11,7 @@ module VictoryValidator (
 	
 	logic col_win, col0_win, col1_win, col2_win, col3_win, col4_win, col5_win, col6_win;
 	logic row_win, row0_win, row1_win, row2_win, row3_win, row4_win, row5_win;
+	logic diag_win_pt1, diag1_win, diag2_win, diag3_win, diag4_win, diag5_win, diag6_win, diag7_win, diag8_win, diag9_win, diag10_win, diag11_win, diag12_win;
 	
 	CheckColumnWin col0 (
 		.val0(val00),
@@ -148,9 +149,106 @@ module VictoryValidator (
 		.win(row5_win)
 	);
 	
+	Check4InLine diag1 (
+		.q0(val00),
+		.q1(val11),
+		.q2(val22),
+		.q3(val33),
+		.win(diag1_win)
+	);
+	
+	Check4InLine diag2 (
+		.q0(val10),
+		.q1(val21),
+		.q2(val32),
+		.q3(val43),
+		.win(diag2_win)
+	);
+	
+	Check4InLine diag3 (
+		.q0(val20),
+		.q1(val31),
+		.q2(val42),
+		.q3(val53),
+		.win(diag3_win)
+	);
+	
+	Check4InLine diag4 (
+		.q0(val30),
+		.q1(val41),
+		.q2(val52),
+		.q3(val63),
+		.win(diag4_win)
+	);
+	
+	Check4InLine diag5 (
+		.q0(val01),
+		.q1(val12),
+		.q2(val23),
+		.q3(val34),
+		.win(diag5_win)
+	);
+	
+	Check4InLine diag6 (
+		.q0(val11),
+		.q1(val22),
+		.q2(val33),
+		.q3(val44),
+		.win(diag6_win)
+	);
+	
+	Check4InLine diag7 (
+		.q0(val21),
+		.q1(val32),
+		.q2(val43),
+		.q3(val54),
+		.win(diag7_win)
+	);
+	
+	Check4InLine diag8 (
+		.q0(val31),
+		.q1(val42),
+		.q2(val53),
+		.q3(val64),
+		.win(diag8_win)
+	);
+	
+	Check4InLine diag9 (
+		.q0(val02),
+		.q1(val13),
+		.q2(val24),
+		.q3(val35),
+		.win(diag9_win)
+	);
+	
+	Check4InLine diag10 (
+		.q0(val12),
+		.q1(val23),
+		.q2(val34),
+		.q3(val45),
+		.win(diag10_win)
+	);
+	
+	Check4InLine diag11 (
+		.q0(val22),
+		.q1(val33),
+		.q2(val44),
+		.q3(val55),
+		.win(diag11_win)
+	);
+	
+	Check4InLine diag12 (
+		.q0(val32),
+		.q1(val43),
+		.q2(val54),
+		.q3(val65),
+		.win(diag12_win)
+	);
+	
+	assign diag_win_pt1 = diag1_win | diag2_win | diag3_win | diag4_win | diag5_win | diag6_win | diag7_win | diag8_win | diag9_win | diag10_win | diag11_win | diag12_win;
 	assign col_win = col0_win | col1_win | col2_win | col3_win | col4_win | col5_win | col6_win;
 	assign row_win = row0_win | row1_win | row2_win | row3_win | row4_win | row5_win;
 	
-	assign win = col_win | row_win;
+	assign win = col_win | row_win | diag_win_pt1;
 endmodule
 
