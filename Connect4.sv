@@ -4,13 +4,22 @@ module Connect4 (
 	input logic [2:0] column,
 	input logic load_btn,
 	input logic player,
-	output logic [6:0] segs1,
-	output logic [6:0] segs0
+	output logic [1:0] val0,
+	output logic [1:0] val1,
+	output logic [1:0] val2,
+	output logic [1:0] val3,
+	output logic [1:0] val4,
+	output logic [1:0] val5,
+	output logic win
+	//output logic [6:0] segs1,
+	//output logic [6:0] segs0
 );
 	logic swp_player, q_player;
 	logic [1:0] mux_out;
 	logic en_loading, t_out, rst_timer, change, one_sec1, one_sec2;
 	logic [28:0] timer;
+	
+	logic [1:0] val00, val01, val02, val03, val04, val05;
 	
 	logic [3:0] secs;
 	
@@ -50,7 +59,23 @@ module Connect4 (
 		.rst(rst),
 		.column(column),
 		.load(en_loading),
-		.mux_out(mux_out)
+		.mux_out(mux_out),
+		.val00(val00),
+		.val01(val01),
+		.val02(val02), 
+		.val03(val03),
+		.val04(val04),
+		.val05(val05)
+	);
+	
+	VictoryValidator victory (
+		.q0(val00),
+		.q1(val01),
+		.q2(val02),
+		.q3(val03),
+		.q4(val04),
+		.q5(val05),
+		.win(win)
 	);
 	
 	PlayerRegister current (
@@ -61,11 +86,18 @@ module Connect4 (
 		.Q(q_player)
 	);
 	
-	SevenSegmentDecoder sg (
-		.A(secs),
-		.seg1(segs1),
-		.seg0(segs0)
-	);
+	//SevenSegmentDecoder sg (
+		//.A(secs),
+		//.seg1(segs1),
+		//.seg0(segs0)
+	//);
+	
+	assign val0 = val00;
+	assign val1 = val01;
+	assign val2 = val02;
+	assign val3 = val03;
+	assign val4 = val04;
+	assign val5 = val05;
 	
 endmodule
 

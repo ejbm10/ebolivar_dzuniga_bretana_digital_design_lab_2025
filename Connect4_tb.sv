@@ -3,7 +3,7 @@ module Connect4_tb();
 	logic clk, rst, load_btn, select;
 	logic [2:0] column;
 	logic [1:0] val0, val1, val2, val3, val4, val5;
-	logic [3:0] secs;
+	logic win;
 
 	Connect4 dut (
 		.clk(clk),
@@ -17,11 +17,11 @@ module Connect4_tb();
 		.val3(val3),
 		.val4(val4),
 		.val5(val5),
-		.secs(secs)
+		.win(win)
 	);
 
 	initial clk = 0;
-	always #10 clk = ~clk;  // 10ns full period
+	always #5 clk = ~clk;  // 10ns full period
 
 	initial begin
 		// Init
@@ -31,7 +31,32 @@ module Connect4_tb();
 		rst = 1;
 		#20 rst = 0;
 		
-		#1000;
+		#100;
+		
+		load_btn = 1;
+		#20; load_btn = 0;
+		
+		#100;
+		
+		load_btn = 1;
+		#20; load_btn = 0;
+		
+		#100;
+		
+		load_btn = 1;
+		#20; load_btn = 0;
+		
+		#100;
+		
+		load_btn = 1;
+		#20; load_btn = 0;
+		
+		#100;
+		
+		load_btn = 1;
+		#20; load_btn = 0;
+		
+		#100;
 		
 	end
 
