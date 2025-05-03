@@ -14,7 +14,7 @@ module Connect4 (
 	
 	logic swp_player, q_player;
 	logic [1:0] mux_out;
-	logic board_full, en_loading, t_out, rst_timer, change, one_sec1, one_sec2, player1_winner, player2_winner, ard_btn;
+	logic board_full, en_loading, t_out, rst_timer, change, player1_winner, player2_winner, ard_btn;
 	logic [28:0] timer;
 	
 	logic [1:0] val00, val01, val02, val03, val04, val05;
@@ -26,7 +26,7 @@ module Connect4 (
 	logic [1:0] val60, val61, val62, val63, val64, val65;
 	
 	logic win, game_over;
-	logic [1:0] q_winner, q_over;
+	logic [1:0] q_state;
 	logic [3:0] secs;
 	
 	logic [5:0] spots;
@@ -187,20 +187,12 @@ module Connect4 (
 		.Q(q_player)
 	);
 	
-	Register winner_reg (
+	Register game_state (
 		.clk(clk),
 		.rst(rst),
-		.en(player1_winner | player2_winner),
-		.D(player1_winner ? 2'b01 : (player2_winner ? 2'b10 : 2'b00)),
-		.Q(q_winner)
-	);
-	
-	Register game_over_reg (
-		.clk(clk),
-		.rst(rst),
-		.en(game_over),
-		.D(game_over ? 2'b11 : 2'b00),
-		.Q(q_over)
+		.en(player1_winner | player2_winner | game_over),
+		.D(player1_winner ? 2'b01 : (player2_winner ? 2'b10 : (game_over ? 2'b11 : 2'b00))),
+		.Q(q_state)
 	);
 	
 	SevenSegmentDecoder sg (
