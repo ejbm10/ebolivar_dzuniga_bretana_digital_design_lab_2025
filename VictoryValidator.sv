@@ -10,7 +10,9 @@ module VictoryValidator (
 );
 	
 	logic col0_win, col0_win1, col0_win2, col0_win3;
+	logic col1_win, col1_win1, col1_win2, col1_win3;
 	
+	// Columna 0
 	Check4InLine op1_column0 (
 		.q0(val00),
 		.q1(val01),
@@ -35,7 +37,35 @@ module VictoryValidator (
 		.win(col0_win3)
 	);
 	
-	assign win = col0_win1 | col0_win2 | col0_win3;
+	// Columna 1
+	Check4InLine op1_column1 (
+		.q0(val10),
+		.q1(val11),
+		.q2(val12),
+		.q3(val13),
+		.win(col1_win1)
+	);
+	
+	Check4InLine op2_column1 (
+		.q0(val11),
+		.q1(val12),
+		.q2(val13),
+		.q3(val14),
+		.win(col1_win2)
+	);
+	
+	Check4InLine op3_column1 (
+		.q0(val12),
+		.q1(val13),
+		.q2(val14),
+		.q3(val15),
+		.win(col1_win3)
+	);
+	
+	assign col0_win = col0_win1 | col0_win2 | col0_win3;
+	assign col1_win = col1_win1 | col1_win2 | col1_win3;
+	
+	assign win = col0_win | col1_win;
 	
 endmodule
 
