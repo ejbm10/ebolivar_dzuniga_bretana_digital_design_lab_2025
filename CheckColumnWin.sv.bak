@@ -1,0 +1,33 @@
+module CheckColumnWin (
+	input logic [1:0] val0,
+	input logic [1:0] val1,
+	input logic [1:0] val2,
+	input logic [1:0] val3,
+	input logic [1:0] val4,
+	input logic [1:0] val5,
+	output logic win
+);
+
+	Check4InLine op1 (
+		.q0(val00),
+		.q1(val01),
+		.q2(val02),
+		.q3(val03),
+		.win(col0_win1)
+	);
+	
+	Check4InLine op2 (
+		.q0(val01),
+		.q1(val02),
+		.q2(val03),
+		.q3(val04),
+		.win(col0_win2)
+	);
+	
+	Check4InLine op3 (
+		.q0(val02),
+		.q1(val03),
+		.q2(val04),
+		.q3(val05),
+		.win(col0_win3)
+	);

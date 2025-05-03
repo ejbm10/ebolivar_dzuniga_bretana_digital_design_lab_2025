@@ -124,7 +124,7 @@ module ColumnModule (
 	
 	AndGate and5 (
 		.A(empty5),
-		.B(1),	// BOTTOM ROW, NO NEED TO CHECK FOR TOKEN BELOW.
+		.B(1),	// Ultima fila, no necesita verificar nada debajo
 		.C(en),
 		.D(load),
 		.Y(en5)
