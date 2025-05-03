@@ -1,4 +1,4 @@
-module SPI_Slave (
+module comunicacionFPGA (
     input logic clk,         // Reloj del sistema
     input logic rst,         // Reset
     input logic sck,         // SPI Clock desde el master

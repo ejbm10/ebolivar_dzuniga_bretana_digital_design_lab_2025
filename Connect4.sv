@@ -1,15 +1,20 @@
 module Connect4 (
 	input logic clk,
 	input logic rst,
-	input logic [2:0] column,
-	input logic load_btn,
+	input logic sck,
+	input logic ss,
+	input logic mosi,
+	input logic [2:0] jugada1,
+	input logic fpga_btn,
 	input logic player,
 	output logic [6:0] segs1,
 	output logic [6:0] segs0
 );
+	logic [2:0] jugada2;
+	
 	logic swp_player, q_player;
 	logic [1:0] mux_out;
-	logic en_loading, t_out, rst_timer, change, one_sec1, one_sec2, player1_winner, player2_winner;
+	logic en_loading, t_out, rst_timer, change, one_sec1, one_sec2, player1_winner, player2_winner, ard_btn;
 	logic [28:0] timer;
 	
 	logic [1:0] val00, val01, val02, val03, val04, val05;
@@ -27,7 +32,7 @@ module Connect4 (
 	FSM controller (
 		.clk(clk),
 		.rst(rst),
-		.load(load_btn),
+		.load(q_player ? ard_btn : fpga_btn),
 		.time_out(t_out),
 		.win(win),
 		.current_player(q_player),
@@ -38,7 +43,7 @@ module Connect4 (
 		.player2_winner(player2_winner)
 	);
 	
-	Mux2to1 selector (
+	Mux2to1 #(.N(2)) selector (
 		.A(2'b01),	// Value for FPGA player
 		.B(2'b10),	// Value for Arduino player
 		.S(q_player),
@@ -62,7 +67,9 @@ module Connect4 (
 	Loader loader (
 		.clk(clk),
 		.rst(rst),
-		.column(column),
+		.current_player(q_player),
+		.jugada1(jugada1),
+		.jugada2(jugada2),
 		.load(en_loading),
 		.mux_out(mux_out),
 		.val00(val00),
@@ -175,6 +182,16 @@ module Connect4 (
 		.A(secs),
 		.seg1(segs1),
 		.seg0(segs0)
+	);
+	
+	comunicacionFPGA j2 (
+		.clk(clk),
+		.rst(rst),
+		.sck(sck),
+		.ss(ss),
+		.mosi(mosi),
+		.jugada(jugada2),
+		.dato_listo(ard_btn)
 	);
 	
 endmodule
