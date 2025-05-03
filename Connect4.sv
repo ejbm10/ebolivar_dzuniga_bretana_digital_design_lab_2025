@@ -4,20 +4,12 @@ module Connect4 (
 	input logic [2:0] column,
 	input logic load_btn,
 	input logic player,
-	output logic [1:0] val0,
-	output logic [1:0] val1,
-	output logic [1:0] val2,
-	output logic [1:0] val3,
-	output logic [1:0] val4,
-	output logic [1:0] val5,
-	output logic [1:0] val6,
-	output logic win
-	//output logic [6:0] segs1,
-	//output logic [6:0] segs0
+	output logic [6:0] segs1,
+	output logic [6:0] segs0
 );
 	logic swp_player, q_player;
 	logic [1:0] mux_out;
-	logic en_loading, t_out, rst_timer, change, one_sec1, one_sec2;
+	logic en_loading, t_out, rst_timer, change, one_sec1, one_sec2, player1_winner, player2_winner;
 	logic [28:0] timer;
 	
 	logic [1:0] val00, val01, val02, val03, val04, val05;
@@ -28,6 +20,8 @@ module Connect4 (
 	logic [1:0] val50, val51, val52, val53, val54, val55;
 	logic [1:0] val60, val61, val62, val63, val64, val65;
 	
+	logic win;
+	logic [1:0] winner;
 	logic [3:0] secs;
 	
 	FSM controller (
@@ -35,9 +29,13 @@ module Connect4 (
 		.rst(rst),
 		.load(load_btn),
 		.time_out(t_out),
+		.win(win),
+		.current_player(q_player),
 		.en_loading(en_loading),
 		.rst_timer(rst_timer),
-		.change_player(change)
+		.change_player(change),
+		.player1_winner(player1_winner),
+		.player2_winner(player2_winner)
 	);
 	
 	Mux2to1 selector (
@@ -165,19 +163,19 @@ module Connect4 (
 		.Q(q_player)
 	);
 	
-	//SevenSegmentDecoder sg (
-		//.A(secs),
-		//.seg1(segs1),
-		//.seg0(segs0)
-	//);
+	Register winner_reg (
+		.clk(clk),
+		.rst(rst),
+		.en(player1_winner | player2_winner),
+		.D(player1_winner ? 2'b01 : (player2_winner ? 2'b10 : 2'b00)),
+		.Q(winner)
+	);
 	
-	assign val0 = val05;
-	assign val1 = val15;
-	assign val2 = val25;
-	assign val3 = val35;
-	assign val4 = val45;
-	assign val5 = val55;
-	assign val6 = val65;
+	SevenSegmentDecoder sg (
+		.A(secs),
+		.seg1(segs1),
+		.seg0(segs0)
+	);
 	
 endmodule
 
