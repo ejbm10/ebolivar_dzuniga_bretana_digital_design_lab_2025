@@ -12,6 +12,7 @@ module VictoryValidator (
 	logic col_win, col0_win, col1_win, col2_win, col3_win, col4_win, col5_win, col6_win;
 	logic row_win, row0_win, row1_win, row2_win, row3_win, row4_win, row5_win;
 	logic diag_win_pt1, diag1_win, diag2_win, diag3_win, diag4_win, diag5_win, diag6_win, diag7_win, diag8_win, diag9_win, diag10_win, diag11_win, diag12_win;
+	logic diag_win_pt2, diag13_win, diag14_win, diag15_win, diag16_win, diag17_win, diag18_win, diag19_win, diag20_win, diag21_win, diag22_win, diag23_win, diag24_win;
 	
 	CheckColumnWin col0 (
 		.val0(val00),
@@ -245,10 +246,108 @@ module VictoryValidator (
 		.win(diag12_win)
 	);
 	
+	Check4InLine diag13 (
+		.q0(val60),
+		.q1(val51),
+		.q2(val42),
+		.q3(val33),
+		.win(diag13_win)
+	);
+	
+	Check4InLine diag14 (
+		.q0(val50),
+		.q1(val41),
+		.q2(val32),
+		.q3(val23),
+		.win(diag14_win)
+	);
+	
+	Check4InLine diag15 (
+		.q0(val40),
+		.q1(val31),
+		.q2(val22),
+		.q3(val13),
+		.win(diag15_win)
+	);
+	
+	Check4InLine diag16 (
+		.q0(val30),
+		.q1(val21),
+		.q2(val12),
+		.q3(val03),
+		.win(diag16_win)
+	);
+	
+	Check4InLine diag17 (
+		.q0(val61),
+		.q1(val52),
+		.q2(val43),
+		.q3(val34),
+		.win(diag17_win)
+	);
+	
+	Check4InLine diag18 (
+		.q0(val51),
+		.q1(val42),
+		.q2(val33),
+		.q3(val24),
+		.win(diag18_win)
+	);
+	
+	Check4InLine diag19 (
+		.q0(val41),
+		.q1(val32),
+		.q2(val23),
+		.q3(val14),
+		.win(diag19_win)
+	);
+	
+	Check4InLine diag20 (
+		.q0(val31),
+		.q1(val22),
+		.q2(val13),
+		.q3(val04),
+		.win(diag20_win)
+	);
+	
+	Check4InLine diag21 (
+		.q0(val62),
+		.q1(val53),
+		.q2(val44),
+		.q3(val35),
+		.win(diag21_win)
+	);
+	
+	Check4InLine diag22 (
+		.q0(val52),
+		.q1(val43),
+		.q2(val34),
+		.q3(val25),
+		.win(diag22_win)
+	);
+	
+	Check4InLine diag23 (
+		.q0(val42),
+		.q1(val33),
+		.q2(val24),
+		.q3(val15),
+		.win(diag23_win)
+	);
+	
+	Check4InLine diag24 (
+		.q0(val32),
+		.q1(val23),
+		.q2(val14),
+		.q3(val05),
+		.win(diag24_win)
+	);
+	
 	assign diag_win_pt1 = diag1_win | diag2_win | diag3_win | diag4_win | diag5_win | diag6_win | diag7_win | diag8_win | diag9_win | diag10_win | diag11_win | diag12_win;
+	assign diag_win_pt2 = diag13_win | diag14_win | diag15_win | diag16_win | diag17_win | diag18_win | diag19_win | diag20_win | diag21_win | diag22_win | diag23_win | diag24_win;
 	assign col_win = col0_win | col1_win | col2_win | col3_win | col4_win | col5_win | col6_win;
 	assign row_win = row0_win | row1_win | row2_win | row3_win | row4_win | row5_win;
 	
-	assign win = col_win | row_win | diag_win_pt1;
+	assign win = col_win | row_win | diag_win_pt1 | diag_win_pt2;
+	
 endmodule
 
