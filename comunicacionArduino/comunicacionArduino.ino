@@ -1,11 +1,13 @@
 #include <SPI.h>
 
-const int ssPin = 10;          // Slave Select
+const int ssPin = 10;
+const int enviado = 12;          // Slave Select
 const int switchPins[3] = {2, 3, 4}; // Switches para columna (3 bits: 0–7)
 const int botonEnvio = 5;      // Botón para enviar jugada
 
 void setup() {
   pinMode(ssPin, OUTPUT);
+  pinMode(enviado, OUTPUT);
   digitalWrite(ssPin, HIGH);   // Desactiva esclavo al inicio
   SPI.begin();                 // Inicia SPI como master
 
@@ -38,8 +40,10 @@ byte leerSwitches() {
 
 void enviarJugada(byte valor) {
   digitalWrite(ssPin, LOW);    // Activar esclavo
+  digitalWrite(enviado, HIGH); // Se avisa que se envio el mensaje
   SPI.transfer(valor);         // Enviar jugada
   digitalWrite(ssPin, HIGH);   // Desactivar esclavo
+  digitalWrite(enviado, LOW); // Se vuelve a LOW para futuras jugadas
 
   Serial.print("Jugada enviada: ");
   Serial.println(valor);

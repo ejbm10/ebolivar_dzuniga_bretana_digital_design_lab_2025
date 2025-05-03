@@ -7,6 +7,9 @@ module Connect4 (
 	input logic [2:0] jugada1,
 	input logic fpga_btn,
 	input logic player,
+	input logic sck,
+	input logic mosi,
+	input logic ss,
 	output logic [6:0] segs1,
 	output logic [6:0] segs0
 );
