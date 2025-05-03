@@ -26,7 +26,7 @@ module Connect4 (
 	logic [1:0] val60, val61, val62, val63, val64, val65;
 	
 	logic win, game_over;
-	logic [1:0] winner;
+	logic [1:0] q_winner, q_over;
 	logic [3:0] secs;
 	
 	logic [5:0] spots;
@@ -192,7 +192,15 @@ module Connect4 (
 		.rst(rst),
 		.en(player1_winner | player2_winner),
 		.D(player1_winner ? 2'b01 : (player2_winner ? 2'b10 : 2'b00)),
-		.Q(winner)
+		.Q(q_winner)
+	);
+	
+	Register game_over_reg (
+		.clk(clk),
+		.rst(rst),
+		.en(game_over),
+		.D(game_over ? 2'b11 : 2'b00),
+		.Q(q_over)
 	);
 	
 	SevenSegmentDecoder sg (
