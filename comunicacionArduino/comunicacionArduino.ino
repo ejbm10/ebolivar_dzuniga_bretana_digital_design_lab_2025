@@ -7,6 +7,7 @@ const int botonEnvio = 5;      // Botón para enviar jugada
 
 void setup() {
   pinMode(ssPin, OUTPUT);
+  pinMode(enviado, OUTPUT);
   digitalWrite(ssPin, HIGH);   // Desactiva esclavo al inicio
   SPI.begin();                 // Inicia SPI como master
 
