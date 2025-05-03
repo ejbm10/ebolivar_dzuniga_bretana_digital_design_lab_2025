@@ -57,12 +57,6 @@ set_global_assignment -name EDA_TEST_BENCH_NAME Connect4_tb -section_id eda_simu
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id Connect4_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME Connect4_tb -section_id Connect4_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE Connect4_tb.sv -section_id Connect4_tb
-<<<<<<< HEAD
-=======
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
->>>>>>> 2b66461e219da60bf73a72583e77bd96f34c078a
 set_global_assignment -name BOARD "Cyclone V SoC Development Kit"
 set_location_assignment PIN_AF14 -to clk
 set_location_assignment PIN_AB30 -to rst
@@ -85,12 +79,10 @@ set_location_assignment PIN_AD17 -to segs1[3]
 set_location_assignment PIN_AE18 -to segs1[4]
 set_location_assignment PIN_AE17 -to segs1[5]
 set_location_assignment PIN_V17 -to segs1[6]
-<<<<<<< HEAD
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-=======
->>>>>>> 2b66461e219da60bf73a72583e77bd96f34c078a
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SYSTEMVERILOG_FILE comunicacionFPGA.sv
 set_global_assignment -name SYSTEMVERILOG_FILE FSM.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Mux2to1.sv
@@ -106,15 +98,8 @@ set_global_assignment -name SYSTEMVERILOG_FILE Loader.sv
 set_global_assignment -name SYSTEMVERILOG_FILE PlayerRegister.sv
 set_global_assignment -name SYSTEMVERILOG_FILE SecondsValidator.sv
 set_global_assignment -name SYSTEMVERILOG_FILE SevenSegmentDecoder.sv
-<<<<<<< HEAD
 set_global_assignment -name SYSTEMVERILOG_FILE VictoryValidator.sv
 set_global_assignment -name SYSTEMVERILOG_FILE OrGate.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Check4InLine.sv
 set_global_assignment -name SYSTEMVERILOG_FILE CheckColumnWin.sv
 set_global_assignment -name SYSTEMVERILOG_FILE CheckRowWin.sv
-=======
-set_location_assignment PIN_W15 -to sck
-set_location_assignment PIN_AK2 -to mosi
-set_location_assignment PIN_Y16 -to ss
->>>>>>> 2b66461e219da60bf73a72583e77bd96f34c078a
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
