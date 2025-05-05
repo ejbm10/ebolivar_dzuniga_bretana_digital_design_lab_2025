@@ -5,10 +5,7 @@ module clkDivisor(
 
 	reg [15:0] cnt;
 	
-	always @(posedge clk) begin
-	
-		cnt <= cnt + 16'h4000;
-		clk_25 <= cnt[15];
-	end
+	always @(posedge clk)
+	clk_25 <= cnt + 16'h8000;
 
 endmodule

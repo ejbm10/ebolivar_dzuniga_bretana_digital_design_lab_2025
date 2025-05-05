@@ -5,7 +5,10 @@ module Connect4 (
 	input logic load_btn,
 	input logic player,
 	output logic [6:0] segs1,
-	output logic [6:0] segs0
+	output logic [6:0] segs0,
+	output logic vga_hs, vga_vs, vga_blk, vga_sync,
+	output logic [7:0] red, green, blue,
+	output logic clk_25
 );
 	logic swp_player, q_player;
 	logic [1:0] mux_out;
@@ -13,6 +16,8 @@ module Connect4 (
 	logic [28:0] timer;
 	
 	logic [3:0] secs;
+	
+	logic [1:0] con4_matrix [0:5][0:6];
 	
 	FSM controller (
 		.clk(clk),
@@ -65,6 +70,20 @@ module Connect4 (
 		.A(secs),
 		.seg1(segs1),
 		.seg0(segs0)
+	);
+	
+	VGADriver vga(
+		.clk(clk),
+		.rst(rst),
+		.con4_matrix(con4_matrix),
+		.vga_hs(vga_hs), 
+		.vga_vs(vga_vs), 
+		.vga_blk(vga_blk), 
+		.vga_sync(vga_sync),
+		.red(red), 
+		.green(green), 
+		.blue(blue),
+		.clk_25(clk_25)
 	);
 	
 endmodule
