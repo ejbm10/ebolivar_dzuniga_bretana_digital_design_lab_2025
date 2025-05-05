@@ -33,10 +33,10 @@ module VGADriver(
 	logic [1:0] tablero_prueba[0:5][0:6];
 
 	initial begin
-		tablero = '{default: 2'b00}; // vacío
-		tablero[5][0] = 2'b01; // ficha roja
-		tablero[5][1] = 2'b10; // ficha amarilla
-		tablero[4][0] = 2'b01;
+		tablero_prueba = '{default: 2'b00}; // vacío
+		tablero_prueba[5][0] = 2'b01; // ficha roja
+		tablero_prueba[5][1] = 2'b10; // ficha amarilla
+		tablero_prueba[4][0] = 2'b01;
 	end
 
 	DrawScreen drw(
