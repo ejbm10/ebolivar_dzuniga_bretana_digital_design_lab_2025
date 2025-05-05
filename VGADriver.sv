@@ -12,8 +12,6 @@ module VGADriver(
 	logic [2:0] r3, g3, b3;
 	logic frame_start;
 	
-	//clkDivisor div(clk,clk_25);
-	
 	clk50to25 clk50to25_inst(
 		.refclk(clk),
 		.rst(rst),
@@ -32,13 +30,21 @@ module VGADriver(
 		.frame_start(frame_start)
 	);
 	
-	//DrawScreen drw(clk, rst, visible, hs, vs, con4_matrix, red, green, blue);
+	logic [1:0] tablero_prueba[0:5][0:6];
+
+	initial begin
+		tablero = '{default: 2'b00}; // vacío
+		tablero[5][0] = 2'b01; // ficha roja
+		tablero[5][1] = 2'b10; // ficha amarilla
+		tablero[4][0] = 2'b01;
+	end
+
 	DrawScreen drw(
 		.clk(clk_25),
 		.rst(rst),
 		.visible(vga_blk),
 		.frame_start(frame_start),
-		.board(con4_matrix),
+		.board(tablero_prueba),
 		.red(r3),
 		.green(g3),
 		.blue(b3)

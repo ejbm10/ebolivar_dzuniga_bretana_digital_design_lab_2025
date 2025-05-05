@@ -1,29 +1,3 @@
-//module GraphicsDriver(
-//	input logic clk_25,
-//	output logic vga_hsync, vga_vsync, vga_blk, vga_sync,
-//	output logic [9:0] hs, vs
-//);
-//
-//	always @(posedge clk_25) begin
-//		hs++;
-//		if (hs == 10'd800) begin
-//			hs = 0;
-//			vs++;
-//			if (vs == 10'd525) vs = 0;
-//		end
-//	end
-//	
-//	assign vga_hsync = ~(hs > 10'd640 + 10'd16 & hs < 10'd640 + 10'd16 + 10'd96);
-//	
-//	assign vga_vsync = ~(vs > 10'd480 + 10'd11 & vs < 10'd480 + 10'd11 + 10'd2);
-//	
-//	assign vga_sync =  vga_hsync & vga_vsync;
-//	
-//	assign vga_blk = (hs < 10'd640) & (vs < 10'd480);
-//		
-//
-//endmodule
-
 module GraphicsDriver(
     input  logic clk_25,
     output logic vga_hsync,
@@ -32,10 +6,10 @@ module GraphicsDriver(
     output logic vga_sync,
     output logic [9:0] hs,
     output logic [9:0] vs,
-    output logic frame_start  // ← NUEVO: para sincronizar frames
+    output logic frame_start
 );
 
-    // Parámetros VGA estándar 640x480 @ 60Hz
+    // Parámetros VGA 640x480 @ 60Hz
     localparam H_VISIBLE     = 640;
     localparam H_FRONT_PORCH = 16;
     localparam H_SYNC_PULSE  = 96;
@@ -54,10 +28,9 @@ module GraphicsDriver(
     assign hs = h_count;
     assign vs = v_count;
 
-    // Señal visible
-    assign vga_blk = (h_count < H_VISIBLE) && (v_count < V_VISIBLE);
+    assign vga_blk = (h_count < H_VISIBLE) && (v_count < V_VISIBLE); //Visible
 
-    // Sincronía horizontal y vertical (activa en bajo)
+	 //Sync
     assign vga_hsync = ~(h_count >= (H_VISIBLE + H_FRONT_PORCH) &&
                          h_count <  (H_VISIBLE + H_FRONT_PORCH + H_SYNC_PULSE));
 
@@ -66,7 +39,7 @@ module GraphicsDriver(
 
     assign vga_sync = vga_hsync & vga_vsync;
 
-    // Frame start: se activa un solo ciclo cuando ambos contadores vuelven a cero
+    // Frame start se activa un solo ciclo cuando ambos contadores vuelven a cero
     assign frame_start = (h_count == 0 && v_count == 0);
 
     always_ff @(posedge clk_25) begin
