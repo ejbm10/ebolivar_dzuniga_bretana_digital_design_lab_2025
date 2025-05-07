@@ -21,12 +21,13 @@ module DrawScreen(
     logic inside_board;
     logic [2:0] r, g, b;
 
-    // ← Las variables que causaban error, ahora están fuera del always
     integer local_x, local_y;
     integer dx, dy, dist2;
 
     always_ff @(negedge clk or posedge rst) begin
         if (rst) // | frame_start)
+				pixel_count <= 0;
+		  else if (frame_start)
             pixel_count <= 0;
         else if (visible)
             pixel_count <= pixel_count + 1;

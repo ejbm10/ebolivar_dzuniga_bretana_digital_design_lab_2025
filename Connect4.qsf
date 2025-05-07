@@ -99,9 +99,6 @@ set_global_assignment -name EDA_TEST_BENCH_FILE SecondsValidator_tb.sv -section_
 set_global_assignment -name EDA_TEST_BENCH_FILE PlayerRegister_tb.sv -section_id PlayerRegister_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE FSM_tb.sv -section_id FSM_tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity Loader -section_id Top
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name QIP_FILE clk50to25.qip
 set_global_assignment -name SOURCE_FILE clk50to25.cmp
 set_global_assignment -name VERILOG_FILE clk50to25.v
@@ -133,7 +130,7 @@ set_global_assignment -name SYSTEMVERILOG_FILE VictoryValidator_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE SecondsValidator_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE PlayerRegister_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE FSM_tb.sv
-set_location_assignment PIN_AJ4 -to fpga_btn
+set_location_assignment PIN_AK4 -to fpga_btn
 set_location_assignment PIN_AD30 -to jugada1[0]
 set_location_assignment PIN_AC29 -to jugada1[1]
 set_location_assignment PIN_AA30 -to jugada1[2]
@@ -170,4 +167,9 @@ set_location_assignment PIN_W15 -to ss
 set_location_assignment PIN_Y16 -to sck
 set_location_assignment PIN_AK2 -to mosi
 set_location_assignment PIN_AK3 -to pin_recibido
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AJ4 -to fpga_btn2
+set_location_assignment PIN_AC23 -to t_out
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

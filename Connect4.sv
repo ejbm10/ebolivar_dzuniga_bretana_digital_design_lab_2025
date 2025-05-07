@@ -7,18 +7,23 @@ module Connect4 (
 	input logic pin_recibido,
 	input logic [2:0] jugada1,
 	input logic fpga_btn,
+	input logic fpga_btn2,
 	input logic player,
 	output logic [6:0] segs1,
 	output logic [6:0] segs0,
 	output logic vga_hs, vga_vs, vga_blk, vga_sync,
 	output logic [7:0] red, green, blue,
-	output logic clk_25
+	output logic clk_25,
+	output logic t_out
 );
-	logic [2:0] jugada2;
+	//logic [2:0] jugada2;
 	
-	logic swp_player, q_player;
+	logic q_player;
+	logic change;
+	
+	logic swp_player;
 	logic [1:0] mux_out;
-	logic board_full, en_loading, t_out, rst_timer, change, player1_winner, player2_winner, ard_btn;
+	logic board_full, en_loading, rst_timer, player1_winner, player2_winner, ard_btn;
 	logic [28:0] timer;
 	
 	logic win, game_over;
@@ -29,10 +34,11 @@ module Connect4 (
 
 	logic [1:0] con4_matrix [0:5][0:6];
 	
+	
 	FSM controller (
 		.clk(clk),
 		.rst(rst),
-		.load(q_player ? ard_btn : !fpga_btn),
+		.load(q_player ? !fpga_btn2 : !fpga_btn),
 		.time_out(t_out),
 		.win(win),
 		.current_player(q_player),
@@ -84,7 +90,7 @@ module Connect4 (
 		.rst(rst),
 		.current_player(q_player),
 		.jugada1(jugada1),
-		.jugada2(jugada2),
+		//.jugada2(jugada1),
 		.load(en_loading),
 		.mux_out(mux_out),
 		.val00(con4_matrix[0][0]),
@@ -199,17 +205,16 @@ module Connect4 (
 		.seg0(segs0)
 	);
 	
-	comunicacionFPGA j2 (
+	/*comunicacionFPGA j2 (
 		.clk(clk),
 		.rst(rst),
 		.sck(sck),
 		.ss(ss),
 		.mosi(mosi),
 		.jugada(jugada2),
-		.dato_listo(dato_listo),
 		.pin_recibido(pin_recibido),
 		.recibido(ard_btn)
-	);
+	);*/
 	
 	VGADriver vga(
 		.clk(clk),

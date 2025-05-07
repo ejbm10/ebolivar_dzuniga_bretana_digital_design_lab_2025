@@ -2,7 +2,7 @@ module Loader (
 	input logic clk,
 	input logic rst,
 	input logic current_player,
-	input logic [2:0] jugada1, jugada2,
+	input logic [2:0] jugada1,
 	input logic load,
 	input logic [1:0] mux_out,
 	output logic [1:0] val00, val01, val02, val03, val04, val05,
@@ -16,13 +16,13 @@ module Loader (
 
 	logic col0, col1, col2, col3, col4, col5, col6;
 	logic [2:0] column;
-	
-	Mux2to1 #(.N(3)) select_player (
+	assign column = jugada1;
+	/*Mux2to1 #(.N(3)) select_player (
 		.A(jugada1),
 		.B(jugada2),
 		.S(current_player),
 		.Y(column)
-	);
+	);*/
 	
 	Comparator #(.N(3)) comp_col0 (
 		.A(column),
