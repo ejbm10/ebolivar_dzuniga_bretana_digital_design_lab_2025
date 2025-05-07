@@ -4,6 +4,8 @@ module DrawScreen(
     input logic visible,
     input logic frame_start,
     input logic [1:0] board [0:5][0:6],
+	 input logic player1_win,
+	 input logic player2_win,
     output logic [2:0] red,
     output logic [2:0] green,
     output logic [2:0] blue
@@ -72,15 +74,30 @@ module DrawScreen(
 
 				if (dist2 < 30*30) begin
 					case (board[row][col])
-						2'b00: begin r = 0; g = 0; b = 0; end
-						2'b01: begin r = 7; g = 0; b = 0; end
-						2'b10: begin r = 7; g = 7; b = 0; end
-						default: begin r = 7; g = 7; b = 7; end
+						2'b00: begin
+							r = 0; g = 0; b = 0;
+						end
+						2'b01: begin
+							if (player2_win) begin
+								r = 0; g = 7; b = 0;
+							end else begin
+								r = 7; g = 0; b = 0;
+							end
+						end
+						2'b10: begin
+							if (player1_win) begin
+								r = 0; g = 7; b = 0;
+							end else begin
+								r = 7; g = 7; b = 0;
+							end
+						end
+						default: begin
+							r = 7; g = 7; b = 7;
+						end
 					endcase
 				end
 			end
 		end
-
 
     assign red   = r;
     assign green = g;

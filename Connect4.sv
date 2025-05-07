@@ -13,8 +13,7 @@ module Connect4 (
 	output logic [6:0] segs0,
 	output logic vga_hs, vga_vs, vga_blk, vga_sync,
 	output logic [7:0] red, green, blue,
-	output logic clk_25,
-	output logic t_out
+	output logic clk_25
 );
 	logic swp_player, q_player;
 	logic [1:0] mux_out;
@@ -213,6 +212,8 @@ module Connect4 (
 		.clk(clk),
 		.rst(rst),
 		.con4_matrix(con4_matrix),
+		.player1_win(player1_winner),
+		.player2_win(player2_winner),
 		.vga_hs(vga_hs), 
 		.vga_vs(vga_vs), 
 		.vga_blk(vga_blk), 

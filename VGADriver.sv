@@ -1,6 +1,8 @@
 module VGADriver(
 	input logic clk, rst,
 	input logic [1:0] con4_matrix [0:5][0:6],
+	input player1_win,
+	input player2_win,
 	output logic vga_hs, vga_vs, vga_blk, vga_sync,
 	output logic [7:0] red, green, blue,
 	output logic clk_25
@@ -36,6 +38,8 @@ module VGADriver(
 		.visible(vga_blk),
 		.frame_start(frame_start),
 		.board(con4_matrix),
+		.player1_win(player1_win),
+		.player2_win(player2_win),
 		.red(r3),
 		.green(g3),
 		.blue(b3)
