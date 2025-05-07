@@ -1,0 +1,26 @@
+module SecondsValidator_tb();
+
+	logic clk, rst, t_out;
+	logic [28:0] timer;
+	logic [3:0] secs;
+	
+	SecondsValidator dut (
+		.clk(clk),
+		.rst(rst),
+		.timer(timer),
+		.t_out(t_out),
+		.secs(secs)
+	);
+	
+	always #5 clk = ~clk;
+	
+	initial begin
+		clk = 0;
+		rst = 1;
+		#15;
+		rst = 0;
+		
+		#100000000;
+	end
+	
+endmodule

@@ -1,0 +1,17 @@
+module FSM_tb();
+
+	FSM dut (
+		.clk(clk),
+		.rst(rst),
+		.load(load),
+		.time_out(time_out),
+		.win(win),
+		.q_player(q_player),
+		.full(full),
+		.en_loading(en_loading),
+		.rst_timer(rst_timer),
+		.change_player(change_player),
+		.player1_winner(player1_winner),
+		.player2_winner(player2_winner),
+		.game_over(game_over)
+	);

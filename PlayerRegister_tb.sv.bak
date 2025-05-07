@@ -1,0 +1,26 @@
+module PlayerRegister_tb();
+
+	logic clk, rst, initial_player, current_player, next_player;
+	
+	PlayerRegister dut (
+		.clk(clk),
+		.rst(rst),
+		.initial_player(initial_player),
+		.D(next_player),
+		.Q(current_player)
+	);
+	
+	Inverter dut2 (
+		.A(current_player),
+		.en(change),
+		.Y(next_player)
+	);
+	
+	
+	initial begin
+		clk = 0;
+		rst = 0;
+		
+		initial_player = 0;
+		
+		D = 

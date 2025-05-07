@@ -7,17 +7,15 @@ module Connect4 (
 	input logic [2:0] jugada1,
 	input logic fpga_btn,
 	input logic player,
-	input logic sck,
-	input logic mosi,
-	input logic ss,
 	output logic [6:0] segs1,
 	output logic [6:0] segs0
 );
 	logic [2:0] jugada2;
+	logic ard_btn;
 	
 	logic swp_player, q_player;
 	logic [1:0] mux_out;
-	logic board_full, en_loading, t_out, rst_timer, change, player1_winner, player2_winner, ard_btn;
+	logic board_full, en_loading, t_out, rst_timer, change, player1_winner, player2_winner;
 	logic [28:0] timer;
 	
 	logic [1:0] val00, val01, val02, val03, val04, val05;
@@ -40,7 +38,7 @@ module Connect4 (
 		.load(q_player ? ard_btn : fpga_btn),
 		.time_out(t_out),
 		.win(win),
-		.current_player(q_player),
+		.q_player(q_player),
 		.full(board_full),
 		.en_loading(en_loading),
 		.rst_timer(rst_timer),
