@@ -29,22 +29,13 @@ module VGADriver(
 		.vs(vs),
 		.frame_start(frame_start)
 	);
-	
-	logic [1:0] tablero_prueba[0:5][0:6];
-
-	initial begin
-		tablero_prueba = '{default: 2'b00}; // vacío
-		tablero_prueba[5][0] = 2'b01; // ficha roja
-		tablero_prueba[5][1] = 2'b10; // ficha amarilla
-		tablero_prueba[4][0] = 2'b01;
-	end
 
 	DrawScreen drw(
 		.clk(clk_25),
 		.rst(rst),
 		.visible(vga_blk),
 		.frame_start(frame_start),
-		.board(tablero_prueba),
+		.board(con4_matrix),
 		.red(r3),
 		.green(g3),
 		.blue(b3)
