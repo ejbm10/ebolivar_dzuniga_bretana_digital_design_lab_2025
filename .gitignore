@@ -36,3 +36,5 @@ incremental_db/
 !*.do
 !*.tcl
 
+
+output_files/
