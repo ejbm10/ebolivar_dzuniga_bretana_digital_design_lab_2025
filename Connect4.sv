@@ -4,6 +4,7 @@ module Connect4 (
 	input logic sck,
 	input logic ss,
 	input logic mosi,
+	input logic pin_recibido,
 	input logic [2:0] jugada1,
 	input logic fpga_btn,
 	input logic player,
@@ -205,7 +206,9 @@ module Connect4 (
 		.ss(ss),
 		.mosi(mosi),
 		.jugada(jugada2),
-		.dato_listo(ard_btn)
+		.dato_listo(dato_listo),
+		.pin_recibido(pin_recibido),
+		.recibido(ard_btn)
 	);
 	
 	VGADriver vga(
