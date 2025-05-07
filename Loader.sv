@@ -21,7 +21,7 @@ module Loader (
 	logic [2:0] lfsr;
 	logic [2:0] random_column;
 
-	always_ff @(posedge clk or posedge rst) begin
+	always_ff @(negedge clk or posedge rst) begin
 		if (rst)
 			lfsr <= 3'b001;  // Seed (must not be 0)
 		else if (random) begin

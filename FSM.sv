@@ -42,8 +42,8 @@ module FSM (
 	assign rst_timer = (state == 4'b0100);
 	assign change_player = (state == 4'b0100);
 	assign en_rand = (state == 4'b0011);
-	assign player1_winner = (state == 4'b0111);
-	assign player2_winner = (state == 4'b1000);
+	assign player2_winner = (state == 4'b0111);
+	assign player1_winner = (state == 4'b1000);
 	assign game_over = (state == 4'b1001);
 	
 endmodule
