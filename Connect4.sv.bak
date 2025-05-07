@@ -1,0 +1,26 @@
+module Connect4 (
+	input logic clk,
+	input logic rst,
+	input logic select,
+	
+);
+	
+	FSM Controller(
+		.clk(clk),
+		.rst(rst),
+		.select(select),
+		.move(),
+		.time_out(),
+		.win(),
+		.full(),
+		.rst_timer(),
+		.en_neg(),
+		.en_count(),
+		.en_check(),
+		.en_comp_board(),
+		.player1_win(),
+		.player2_win(),
+		.game_over()
+	);
+	
+	

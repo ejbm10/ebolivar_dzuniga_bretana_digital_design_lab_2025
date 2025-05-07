@@ -1,0 +1,11 @@
+module VictoryValidator (
+	
+);
+
+	Comparator cmp1 #(.N(2)) (
+		.A(),
+		.B(),
+		.cmp()
+	);
+	
+endmodule

@@ -1,0 +1,18 @@
+module VGADriver(
+	input logic clk, rst, win, lose,
+	input logic [6:0][5:0] con4_matrix,
+	output logic vga_hsync, vga_vsync, sync_blk, sync_b,
+	output logic [7:0] red, green, blue,
+	output logic clk_108
+);
+
+	logic [9:0] hs;
+	logic [9:0] vs;
+	
+	clkDivisor div(clk,clk_108);
+	
+	GraphicsDriver gdriver(clk_108, vga_hsync, vga_vsync, sync_blk, sync_b, hs, vs);
+	
+	DrawScreen drw(rst, win, lose, hs, vs, con4_matrix, red, green, blue);
+	
+endmodule

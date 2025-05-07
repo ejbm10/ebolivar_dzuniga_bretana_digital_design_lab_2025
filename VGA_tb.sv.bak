@@ -1,0 +1,79 @@
+module VGA_tb();
+    
+    // Señales para conectar al módulo Connect4Top
+    logic        CLOCK_50;
+    logic [3:0]  KEY;
+    logic [9:0]  SW;
+    logic        VGA_HS;
+    logic        VGA_VS;
+    logic [7:0]  VGA_R;
+    logic [7:0]  VGA_G;
+    logic [7:0]  VGA_B;
+    logic        VGA_BLANK_N;
+    logic        VGA_SYNC_N;
+    logic        VGA_CLK;
+    
+    // Instanciar el módulo principal
+    Connect4Top dut (
+        .CLOCK_50(CLOCK_50),
+        .KEY(KEY),
+        .SW(SW),
+        .VGA_HS(VGA_HS),
+        .VGA_VS(VGA_VS),
+        .VGA_R(VGA_R),
+        .VGA_G(VGA_G),
+        .VGA_B(VGA_B),
+        .VGA_BLANK_N(VGA_BLANK_N),
+        .VGA_SYNC_N(VGA_SYNC_N),
+        .VGA_CLK(VGA_CLK)
+    );
+    
+    // Generación de reloj de 50 MHz (20 ns periodo)
+    initial begin
+        CLOCK_50 = 0;
+        forever #10 CLOCK_50 = ~CLOCK_50;
+    end
+    
+    // Secuencia de prueba
+    initial begin
+        // Inicializar entradas
+        KEY = 4'b0000;
+        SW = 10'b0000000000;
+        
+        // Aplicar reset
+        #20 KEY[0] = 1'b0;
+        #100 KEY[0] = 1'b1;
+        
+        // Esperar un tiempo para que se estabilice
+        #1000;
+        
+        // Activar SW[0] para cambiar el patrón
+        SW[0] = 1'b1;
+        #5000;
+        SW[0] = 1'b0;
+        
+        // Continuar la simulación
+        #10000;
+        
+        $display("Simulación completada");
+        $finish;
+    end
+    
+    // Monitor para verificar las señales VGA
+    initial begin
+        $monitor("Time=%0t: VGA_HS=%b VGA_VS=%b BLANK=%b", 
+                 $time, VGA_HS, VGA_VS, VGA_BLANK_N);
+    end
+    
+    // Verificar la frecuencia correcta del reloj de VGA (25 MHz)
+    initial begin
+        #200; // Esperar a que VGA_CLK esté estable
+        fork
+            begin
+                @(posedge VGA_CLK);
+                $display("VGA_CLK verificación: El reloj debe estar cerca de 25 MHz");
+            end
+        join_none
+    end
+    
+endmodule

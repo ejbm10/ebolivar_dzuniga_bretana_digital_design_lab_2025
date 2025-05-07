@@ -1,0 +1,83 @@
+module Validate10seconds (
+	
+);
+
+	Counter cycles (
+		.clk(clk),
+		.rst(rst | rst_timer),
+		.en_count(1),
+		.count(timer)
+	);
+	
+	Counter seconds (
+		.clk(clk),
+		.rst(rst | rst_timer),
+		.en_count(one_sec1 | one_sec2),
+		.count(secs)
+	);
+	
+	Comparator #(.N(29)) check10secs (
+		.A(timer),
+		.B(29'd50),
+		.cmp(t_out)
+	);
+	
+	Comparator #(.N(26)) check1sec1 (
+		.A(timer),
+		.B(26'd5),
+		.cmp(one_sec1)
+	);
+	
+	Comparator #(.N(26)) check1sec2 (
+		.A(timer),
+		.B(26'd10),
+		.cmp(one_sec2)
+	);
+	
+	Comparator #(.N(26)) check1sec2 (
+		.A(timer),
+		.B(26'd15),
+		.cmp(one_sec2)
+	);
+	
+	Comparator #(.N(26)) check1sec2 (
+		.A(timer),
+		.B(26'd20),
+		.cmp(one_sec2)
+	);
+	
+	Comparator #(.N(26)) check1sec2 (
+		.A(timer),
+		.B(26'd25),
+		.cmp(one_sec2)
+	);
+	
+	Comparator #(.N(26)) check1sec2 (
+		.A(timer),
+		.B(26'd30),
+		.cmp(one_sec2)
+	);
+	
+	Comparator #(.N(26)) check1sec2 (
+		.A(timer),
+		.B(26'd35),
+		.cmp(one_sec2)
+	);
+	
+	Comparator #(.N(26)) check1sec2 (
+		.A(timer),
+		.B(26'd40),
+		.cmp(one_sec2)
+	);
+	
+	Comparator #(.N(26)) check1sec2 (
+		.A(timer),
+		.B(26'd45),
+		.cmp(one_sec2)
+	);
+	
+	Comparator #(.N(26)) check1sec2 (
+		.A(timer),
+		.B(26'd50),
+		.cmp(one_sec2)
+	);

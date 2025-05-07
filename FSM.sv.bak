@@ -1,0 +1,18 @@
+module FSM (
+	input logic s,
+	input logic t_out_fpga,
+	input logic t_out_arduino,
+	input logic L_fpga,
+	input logic L_arduino,
+	output logic fpga_winner,
+	output logic arduino_winner,
+	output logic full_board
+);
+
+	logic [3:0] state, next_state;
+
+	always_ff @(posedge clk or posedge rst) begin
+		if (rst) state <= 4'b0000;
+		else state <= next_state;
+
+case
