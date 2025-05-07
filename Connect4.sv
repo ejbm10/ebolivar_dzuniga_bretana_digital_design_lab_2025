@@ -3,7 +3,7 @@ module Connect4 (
 	input logic rst,
 	input logic sck,
 	input logic ss,
-	input logic mosi,
+	input logic rx,
 	input logic pin_recibido,
 	input logic [2:0] jugada1,
 	input logic fpga_btn,
@@ -199,16 +199,14 @@ module Connect4 (
 		.seg0(segs0)
 	);
 	
-	/*comunicacionFPGA j2 (
+	comunicacionFPGA j2 (
 		.clk(clk),
 		.rst(rst),
-		.sck(sck),
-		.ss(ss),
-		.mosi(mosi),
+		.rx(rx),
 		.jugada(jugada2),
-		.pin_recibido(pin_recibido),
-		.recibido(ard_btn)
-	);*/
+		.confirmacion(ard_btn),
+		.nuevo_dato(nuevo_dato)
+	);
 	
 	VGADriver vga(
 		.clk(clk),
