@@ -7,9 +7,6 @@ module Connect4 (
 	input logic [2:0] jugada1,
 	input logic fpga_btn,
 	input logic player,
-	input logic sck,
-	input logic mosi,
-	input logic ss,
 	input logic pin_recibido,
 	output logic [6:0] segs1,
 	output logic [6:0] segs0
@@ -211,7 +208,7 @@ module Connect4 (
 		.sck(sck),
 		.ss(ss),
 		.mosi(mosi),
-		.pin_recibod(pin_recibido),
+		.pin_recibido(pin_recibido),
 		.jugada(jugada2),
 		.dato_listo(ard_btn),
 		.recibido(recibido)

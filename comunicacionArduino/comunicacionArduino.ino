@@ -1,50 +1,31 @@
-#include <SPI.h>
-
-const int ssPin = 10;
-const int enviado = 12;          // Slave Select
-const int switchPins[3] = {2, 3, 4}; // Switches para columna (3 bits: 0–7)
-const int botonEnvio = 5;      // Botón para enviar jugada
+const int switchPins[3] = {2, 3, 4}; // Pines de los 3 switches
+const int buttonPin = 5;            // Botón de envío
 
 void setup() {
-  pinMode(ssPin, OUTPUT);
-  pinMode(enviado, OUTPUT);
-  digitalWrite(ssPin, HIGH);   // Desactiva esclavo al inicio
-  SPI.begin();                 // Inicia SPI como master
-
-  for (int i = 0; i < 3; i++) {
-    pinMode(switchPins[i], INPUT_PULLUP);
-  }
-
-  pinMode(botonEnvio, INPUT_PULLUP);
-
-  Serial.begin(9600);          // Debug
+  Serial.begin(9600);
+  for (int i = 0; i < 3; i++) pinMode(switchPins[i], INPUT);
+  pinMode(buttonPin, INPUT);
 }
 
 void loop() {
-  if (digitalRead(botonEnvio) == LOW) { // Botón presionado (activo en bajo)
-    byte valor = leerSwitches();
-    enviarJugada(valor);
-    delay(500); // Anti-rebote
-  }
-}
+  static bool sent = false;
 
-byte leerSwitches() {
-  byte jugada = 0;
-  for (int i = 0; i < 3; i++) {
-    if (digitalRead(switchPins[i]) == LOW) { // switch activado
-      jugada |= (1 << i);
+  if (digitalRead(buttonPin) == HIGH && !sent) {
+    byte data = 0;
+
+    // Leer los 3 switches (LSB)
+    for (int i = 0; i < 3; i++) {
+      if (digitalRead(switchPins[i]) == HIGH)
+        data |= (1 << i); // Bits 0,1,2
     }
+
+    data |= (1 << 3); // Bit de confirmación (bit 3)
+
+    Serial.write(data);
+    sent = true;
   }
-  return jugada & 0b00000111; // Asegura que solo se envíen 3 bits
-}
 
-void enviarJugada(byte valor) {
-  digitalWrite(ssPin, LOW);    // Activar esclavo
-  digitalWrite(enviado, HIGH); // Se avisa que se envio el mensaje
-  SPI.transfer(valor);         // Enviar jugada
-  digitalWrite(ssPin, HIGH);   // Desactivar esclavo
-  digitalWrite(enviado, LOW); // Se vuelve a LOW para futuras jugadas
-
-  Serial.print("Jugada enviada: ");
-  Serial.println(valor);
+  // Esperar a que se suelte el botón
+  if (digitalRead(buttonPin) == LOW)
+    sent = false;
 }
