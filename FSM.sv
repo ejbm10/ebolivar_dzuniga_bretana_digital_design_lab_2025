@@ -7,6 +7,7 @@ module FSM (
 	input logic current_player,
 	input logic full,
 	output logic en_loading,
+	output logic en_rand,
 	output logic rst_timer,
 	output logic change_player,
 	output logic player1_winner,
@@ -24,23 +25,25 @@ module FSM (
 	always_comb begin
 		case (state)
 			4'b0000: next_state = load ? 4'b0001 : 4'b0010;
-			4'b0001: next_state = win ? 4'b0100 : 4'b0101;
+			4'b0001: next_state = win ? 4'b0101 : 4'b0110;
 			4'b0010: next_state = time_out ? 4'b0011 : 4'b0000;
-			4'b0011: next_state = 4'b0000;
-			4'b0100: next_state = current_player ? 4'b0110 : 4'b0111;
-			4'b0101: next_state = full ? 4'b1000 : 4'b0011;
-			4'b0110: next_state = 4'b0110;
+			4'b0011: next_state = 4'b0100;
+			4'b0100: next_state = 4'b0000;
+			4'b0101: next_state = current_player ? 4'b0111 : 4'b1000;
+			4'b0110: next_state = full ? 4'b1001 : 4'b0100;
 			4'b0111: next_state = 4'b0111;
 			4'b1000: next_state = 4'b1000;
+			4'b1001: next_state = 4'b1001;
 			default: next_state = 4'b0000;
 		endcase
 	end
 	
-	assign en_loading = (state == 4'b0001);
-	assign rst_timer = (state == 4'b0011);
-	assign change_player = (state == 4'b0011);
-	assign player1_winner = (state == 4'b0110);
+	assign en_loading = (state == 4'b0001) | (state == 4'b0011);
+	assign rst_timer = (state == 4'b0100);
+	assign change_player = (state == 4'b0100);
+	assign en_rand = (state == 4'b0011);
 	assign player2_winner = (state == 4'b0111);
-	assign game_over = (state == 4'b1000);
+	assign player1_winner = (state == 4'b1000);
+	assign game_over = (state == 4'b1001);
 	
 endmodule

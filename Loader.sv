@@ -4,6 +4,7 @@ module Loader (
 	input logic current_player,
 	input logic [2:0] jugada1,
 	input logic load,
+	input logic random,
 	input logic [1:0] mux_out,
 	output logic [1:0] val00, val01, val02, val03, val04, val05,
 	output logic [1:0] val10, val11, val12, val13, val14, val15,
@@ -13,11 +14,26 @@ module Loader (
 	output logic [1:0] val50, val51, val52, val53, val54, val55,
 	output logic [1:0] val60, val61, val62, val63, val64, val65
 );
-
+	
 	logic col0, col1, col2, col3, col4, col5, col6;
 	logic [2:0] column;
 	
-	assign column = jugada1;
+	logic [2:0] lfsr;
+	logic [2:0] random_column;
+
+	always_ff @(negedge clk or posedge rst) begin
+		if (rst)
+			lfsr <= 3'b001;  // Seed (must not be 0)
+		else if (random) begin
+			// LFSR feedback for 3-bit: taps at bit 3 and 2 (x^3 + x + 1)
+			lfsr <= {lfsr[1:0], lfsr[2] ^ lfsr[1]};
+		end
+	end
+
+	// Force result to be in 0–6 range (3-bit LFSR can produce 1–7)
+	assign random_column = (lfsr == 3'd7) ? 3'd0 : lfsr;
+
+	assign column = random ? random_column : jugada1;
 	
 	/*Mux2to1 #(.N(3)) select_player (
 		.A(jugada1),

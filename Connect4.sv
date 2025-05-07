@@ -17,7 +17,7 @@ module Connect4 (
 );
 	logic swp_player, q_player;
 	logic [1:0] mux_out;
-	logic board_full, en_loading, t_out, rst_timer, change, player1_winner, player2_winner, ard_btn;
+	logic board_full, en_loading, t_out, rst_timer, change, player1_winner, player2_winner, en_rand;
 	
 	logic win, game_over;
 	logic [1:0] q_state;
@@ -37,6 +37,7 @@ module Connect4 (
 		.current_player(q_player),
 		.full(board_full),
 		.en_loading(en_loading),
+		.en_rand(en_rand),
 		.rst_timer(rst_timer),
 		.change_player(change),
 		.player1_winner(player1_winner),
@@ -84,6 +85,7 @@ module Connect4 (
 		.jugada1(jugada1),
 		//.jugada2(jugada1),
 		.load(en_loading),
+		.random(en_rand),
 		.mux_out(mux_out),
 		.val00(con4_matrix[0][0]),
 		.val01(con4_matrix[1][0]),

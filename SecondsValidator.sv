@@ -19,4 +19,6 @@ module SecondsValidator (
 		.cmp(t_out)
 	);
 	
+	assign secs = timer / 30'd50000000;
+	
 endmodule
