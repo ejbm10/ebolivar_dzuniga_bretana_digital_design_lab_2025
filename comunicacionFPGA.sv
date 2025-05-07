@@ -1,4 +1,4 @@
-module fpga_uart_receiver (
+module comunicacionFPGA (
     input  logic        clk,
     input  logic        rst,
     input  logic        rx,
@@ -9,18 +9,6 @@ module fpga_uart_receiver (
 
     logic [7:0] rx_data;
     logic       rx_ready;
-
-    // Instancia del módulo UART receptor
-    uart_rx #(
-        .CLK_FREQ(50_000_000),
-        .BAUD_RATE(9600)
-    ) uart_rx_inst (
-        .clk(clk),
-        .rst(rst),
-        .rx(rx),
-        .rx_data(rx_data),
-        .rx_ready(rx_ready)
-    );
 
     always_ff @(posedge clk or posedge rst) begin
         if (rst) begin

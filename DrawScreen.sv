@@ -78,14 +78,14 @@ module DrawScreen(
 							r = 0; g = 0; b = 0;
 						end
 						2'b01: begin
-							if (player2_win) begin
+							if (player1_win) begin
 								r = 0; g = 7; b = 0;
 							end else begin
 								r = 7; g = 0; b = 0;
 							end
 						end
 						2'b10: begin
-							if (player1_win) begin
+							if (player2_win) begin
 								r = 0; g = 7; b = 0;
 							end else begin
 								r = 7; g = 7; b = 0;

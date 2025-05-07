@@ -3,6 +3,7 @@ module Loader (
 	input logic rst,
 	input logic current_player,
 	input logic [2:0] jugada1,
+	input logic [2:0] jugada2,
 	input logic load,
 	input logic random,
 	input logic [1:0] mux_out,
@@ -32,8 +33,6 @@ module Loader (
 
 	// Force result to be in 0–6 range (3-bit LFSR can produce 1–7)
 	assign random_column = (lfsr == 3'd7) ? 3'd0 : lfsr;
-
-	assign column = random ? random_column : jugada1;
 	
 	/*Mux2to1 #(.N(3)) select_player (
 		.A(jugada1),
@@ -41,6 +40,8 @@ module Loader (
 		.S(current_player),
 		.Y(column)
 	);*/
+	
+	assign column = random ? random_column : (current_player ? jugada2 : jugada1);
 	
 	Comparator #(.N(3)) comp_col0 (
 		.A(column),

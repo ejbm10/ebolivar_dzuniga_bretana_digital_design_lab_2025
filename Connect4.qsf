@@ -157,19 +157,15 @@ set_location_assignment PIN_AH19 -to blue[4]
 set_location_assignment PIN_AJ17 -to blue[5]
 set_location_assignment PIN_AJ16 -to blue[6]
 set_location_assignment PIN_AK16 -to blue[7]
-set_location_assignment PIN_W15 -to ss
-set_location_assignment PIN_Y16 -to sck
-set_location_assignment PIN_AK2 -to mosi
-set_location_assignment PIN_AK3 -to pin_recibido
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_AJ4 -to fpga_btn2
-set_location_assignment PIN_AC23 -to t_out
 set_global_assignment -name EDA_TEST_BENCH_FILE Connect4_tb.sv -section_id Connect4_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE Loader_tb.sv -section_id Loader_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE VictoryValidator_tb.sv -section_id VictoryValidator_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE SecondsValidator_tb.sv -section_id SecondsValidator_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE PlayerRegister_tb.sv -section_id PlayerRegister_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE FSM_tb.sv -section_id FSM_tb
+set_location_assignment PIN_W15 -to rx
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
