@@ -99,9 +99,9 @@ set_global_assignment -name EDA_TEST_BENCH_FILE SecondsValidator_tb.sv -section_
 set_global_assignment -name EDA_TEST_BENCH_FILE PlayerRegister_tb.sv -section_id PlayerRegister_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE FSM_tb.sv -section_id FSM_tb
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity Loader -section_id Top
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity Connect4 -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity Connect4 -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -entity Connect4 -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name QIP_FILE clk50to25.qip
 set_global_assignment -name SOURCE_FILE clk50to25.cmp
 set_global_assignment -name VERILOG_FILE clk50to25.v

@@ -25,8 +25,8 @@ module DrawScreen(
     integer local_x, local_y;
     integer dx, dy, dist2;
 
-    always_ff @(posedge clk) begin
-        if (rst || frame_start)
+    always_ff @(negedge clk or posedge rst) begin
+        if (rst) // | frame_start)
             pixel_count <= 0;
         else if (visible)
             pixel_count <= pixel_count + 1;

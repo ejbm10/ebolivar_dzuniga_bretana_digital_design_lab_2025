@@ -32,7 +32,7 @@ module Connect4 (
 	FSM controller (
 		.clk(clk),
 		.rst(rst),
-		.load(q_player ? ard_btn : fpga_btn),
+		.load(q_player ? ard_btn : !fpga_btn),
 		.time_out(t_out),
 		.win(win),
 		.current_player(q_player),
