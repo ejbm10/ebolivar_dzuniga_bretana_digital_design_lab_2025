@@ -16,15 +16,9 @@ module Connect4 (
 	output logic clk_25,
 	output logic t_out
 );
-	//logic [2:0] jugada2;
-	
-	logic q_player;
-	logic change;
-	
-	logic swp_player;
+	logic swp_player, q_player;
 	logic [1:0] mux_out;
-	logic board_full, en_loading, rst_timer, player1_winner, player2_winner, ard_btn;
-	logic [28:0] timer;
+	logic board_full, en_loading, t_out, rst_timer, change, player1_winner, player2_winner, ard_btn;
 	
 	logic win, game_over;
 	logic [1:0] q_state;
@@ -67,7 +61,6 @@ module Connect4 (
 	SecondsValidator sval (
 		.clk(clk),
 		.rst(rst | rst_timer),
-		.timer(timer),
 		.t_out(t_out),
 		.secs(secs)
 	);

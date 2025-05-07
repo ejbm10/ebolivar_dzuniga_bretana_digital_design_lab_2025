@@ -16,7 +16,9 @@ module Loader (
 
 	logic col0, col1, col2, col3, col4, col5, col6;
 	logic [2:0] column;
+	
 	assign column = jugada1;
+	
 	/*Mux2to1 #(.N(3)) select_player (
 		.A(jugada1),
 		.B(jugada2),
